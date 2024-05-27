@@ -1,0 +1,1 @@
+import{s as e}from"./scheduler.3d810cd9.js";import{S as l,i as a}from"./index.ec3fb726.js";const u={title:null,author:"Ronald Otieno",date:"2023--",layout:"blog",published:!1,excerpt:null};class r extends l{constructor(t){super(),a(this,t,null,null,e,{})}}export{r as default,u as metadata};

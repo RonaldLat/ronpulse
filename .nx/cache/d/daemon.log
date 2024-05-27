@@ -1,0 +1,61 @@
+[NX Daemon Server] - 2024-05-27T16:24:11.779Z - Started listening on: /tmp/67dd7f16ea728649c02f/d.sock
+[NX Daemon Server] - 2024-05-27T16:24:11.786Z - [WATCHER]: Subscribed to changes within: /workspace/turbo/ronpulse (native)
+[NX Daemon Server] - 2024-05-27T16:24:11.789Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-05-27T16:24:11.791Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-05-27T16:24:11.793Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-05-27T16:24:11.794Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-05-27T16:24:11.984Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-05-27T16:24:11.985Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-27T16:24:11.985Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-27T16:24:12.884Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-05-27T16:24:12.885Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-05-27T16:24:12.885Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1090. Response time: 1.
+[NX Daemon Server] - 2024-05-27T16:24:12.886Z - Time taken for 'total for creating and serializing project graph' 1089.916529ms
+[NX Daemon Server] - 2024-05-27T16:24:12.891Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-05-27T16:26:56.417Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-05-27T16:26:56.427Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-05-27T16:28:11.570Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-05-27T16:28:11.570Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-05-27T16:28:11.676Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-05-27T16:28:11.676Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-27T16:28:11.676Z - [REQUEST]: package.json,4913
+[NX Daemon Server] - 2024-05-27T16:28:11.767Z - Time taken for 'Load Nx Plugin: /home/gitpod/.npm/_npx/973fb08ee51bb939/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.8941699999850243ms
+[NX Daemon Server] - 2024-05-27T16:28:13.765Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-05-27T16:28:13.765Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-05-27T16:28:13.969Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-05-27T16:28:13.969Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-27T16:28:13.969Z - [REQUEST]: package.json,4913
+[NX Daemon Server] - 2024-05-27T16:28:14.009Z - Time taken for 'Load Nx Plugin: /home/gitpod/.npm/_npx/973fb08ee51bb939/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.6056300000054762ms
+[NX Daemon Server] - 2024-05-27T16:28:24.510Z - [WATCHER]: _tmp_210987_e6b921b2738ed093f732788b98851297 was deleted
+[NX Daemon Server] - 2024-05-27T16:28:24.510Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-05-27T16:28:24.965Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-05-27T16:28:24.965Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-27T16:28:24.965Z - [REQUEST]: _tmp_210987_e6b921b2738ed093f732788b98851297
+[NX Daemon Server] - 2024-05-27T16:28:25.081Z - Time taken for 'Load Nx Plugin: /home/gitpod/.npm/_npx/973fb08ee51bb939/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.5969000000040978ms
+[NX Daemon Server] - 2024-05-27T16:28:27.970Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-05-27T16:28:27.970Z - [WATCHER]: 1 file(s) created or restored, 0 file(s) modified, 1 file(s) deleted
+[NX Daemon Server] - 2024-05-27T16:28:28.075Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-05-27T16:28:28.075Z - [REQUEST]: pnpm-lock.yaml
+[NX Daemon Server] - 2024-05-27T16:28:28.075Z - [REQUEST]: pnpm-lock.yaml.3120233550
+[NX Daemon Server] - 2024-05-27T16:28:28.115Z - Time taken for 'Load Nx Plugin: /home/gitpod/.npm/_npx/973fb08ee51bb939/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.4618100000079721ms
+[NX Daemon Server] - 2024-05-27T16:28:43.071Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-05-27T16:28:43.073Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-05-27T16:28:43.074Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-05-27T16:28:43.076Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-05-27T16:28:43.076Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-05-27T16:28:43.077Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-05-27T16:28:43.077Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2024-05-27T16:28:43.077Z - Time taken for 'total for creating and serializing project graph' 0.8986400000285357ms
+[NX Daemon Server] - 2024-05-27T16:28:43.082Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-05-27T16:29:06.697Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-05-27T16:29:06.706Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-05-27T16:31:35.079Z - [WATCHER]: _tmp_216436_662cf482ea4403a6317ae5ceba0a8588 was deleted
+[NX Daemon Server] - 2024-05-27T16:31:35.079Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-05-27T16:31:35.184Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-05-27T16:31:35.184Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-27T16:31:35.184Z - [REQUEST]: _tmp_216436_662cf482ea4403a6317ae5ceba0a8588
+[NX Daemon Server] - 2024-05-27T16:31:35.223Z - Time taken for 'Load Nx Plugin: /home/gitpod/.npm/_npx/973fb08ee51bb939/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.4550489999819547ms
+[NX Daemon Server] - 2024-05-27T16:31:39.436Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-05-27T16:31:39.531Z - [WATCHER]: Stopping the watcher for /workspace/turbo/ronpulse (sources)
+[NX Daemon Server] - 2024-05-27T16:31:39.531Z - [WATCHER]: Stopping the watcher for /workspace/turbo/ronpulse (outputs)
+[NX Daemon Server] - 2024-05-27T16:31:39.531Z - Server stopped because: "Lock file changed"

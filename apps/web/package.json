@@ -16,7 +16,6 @@
 	},
 	"dependencies": {
 		"@repo/ui": "workspace:*",
-		"example": "workspace:^",
 		"react": "^18.3.1"
 	},
 	"devDependencies": {

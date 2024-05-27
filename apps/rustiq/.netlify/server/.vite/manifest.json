@@ -1,0 +1,208 @@
+{
+  "../../node_modules/.pnpm/@sveltejs+kit@1.30.4_svelte@4.2.17_vite@4.5.3/node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
+    "file": "entries/fallbacks/error.svelte.js",
+    "imports": [
+      "_ssr.js",
+      "_stores.js"
+    ],
+    "isEntry": true,
+    "src": "../../node_modules/.pnpm/@sveltejs+kit@1.30.4_svelte@4.2.17_vite@4.5.3/node_modules/@sveltejs/kit/src/runtime/components/error.svelte"
+  },
+  "../../node_modules/.pnpm/@sveltejs+kit@1.30.4_svelte@4.2.17_vite@4.5.3/node_modules/@sveltejs/kit/src/runtime/server/index.js": {
+    "file": "index.js",
+    "imports": [
+      "_internal.js",
+      "_index.js"
+    ],
+    "isEntry": true,
+    "src": "../../node_modules/.pnpm/@sveltejs+kit@1.30.4_svelte@4.2.17_vite@4.5.3/node_modules/@sveltejs/kit/src/runtime/server/index.js"
+  },
+  ".svelte-kit/generated/server/internal.js": {
+    "file": "internal.js",
+    "imports": [
+      "_internal.js"
+    ],
+    "isEntry": true,
+    "src": ".svelte-kit/generated/server/internal.js"
+  },
+  "_authState.js": {
+    "file": "chunks/authState.js",
+    "imports": [
+      "_index.js",
+      "_supabaseClient.js"
+    ]
+  },
+  "_functions.js": {
+    "file": "chunks/functions.js"
+  },
+  "_index.js": {
+    "file": "chunks/index.js",
+    "imports": [
+      "_ssr.js"
+    ]
+  },
+  "_internal.js": {
+    "file": "chunks/internal.js",
+    "imports": [
+      "_ssr.js"
+    ]
+  },
+  "_products.js": {
+    "file": "chunks/products.js",
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "_ssr.js": {
+    "file": "chunks/ssr.js"
+  },
+  "_stores.js": {
+    "file": "chunks/stores.js",
+    "imports": [
+      "_ssr.js"
+    ]
+  },
+  "_supabaseClient.js": {
+    "file": "chunks/supabaseClient.js"
+  },
+  "src/lib/ui/sofa_grey.png": {
+    "file": "_app/immutable/assets/sofa_grey.95d5ba63.png",
+    "src": "src/lib/ui/sofa_grey.png"
+  },
+  "src/routes/(auth)/login/+page.svelte": {
+    "file": "entries/pages/(auth)/login/_page.svelte.js",
+    "imports": [
+      "_ssr.js",
+      "_supabaseClient.js",
+      "_authState.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/(auth)/login/+page.svelte"
+  },
+  "src/routes/(auth)/signup/+page.svelte": {
+    "file": "entries/pages/(auth)/signup/_page.svelte.js",
+    "imports": [
+      "_ssr.js",
+      "_supabaseClient.js",
+      "_authState.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/(auth)/signup/+page.svelte"
+  },
+  "src/routes/+layout.css": {
+    "file": "_app/immutable/assets/_layout.8d4af7e1.css",
+    "src": "src/routes/+layout.css"
+  },
+  "src/routes/+layout.js": {
+    "file": "entries/pages/_layout.js",
+    "isEntry": true,
+    "src": "src/routes/+layout.js"
+  },
+  "src/routes/+layout.svelte": {
+    "assets": [
+      "_app/immutable/assets/sofa_grey.95d5ba63.png"
+    ],
+    "css": [
+      "_app/immutable/assets/_layout.8d4af7e1.css"
+    ],
+    "file": "entries/pages/_layout.svelte.js",
+    "imports": [
+      "_ssr.js",
+      "_functions.js",
+      "_supabaseClient.js",
+      "_authState.js",
+      "_index.js",
+      "_stores.js",
+      "_products.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/+layout.svelte"
+  },
+  "src/routes/+page.svelte": {
+    "file": "entries/pages/_page.svelte.js",
+    "imports": [
+      "_ssr.js",
+      "_supabaseClient.js",
+      "_products.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/+page.svelte"
+  },
+  "src/routes/[categoryName]/+page.js": {
+    "file": "entries/pages/_categoryName_/_page.js",
+    "imports": [
+      "_supabaseClient.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/[categoryName]/+page.js"
+  },
+  "src/routes/[categoryName]/+page.svelte": {
+    "file": "entries/pages/_categoryName_/_page.svelte.js",
+    "imports": [
+      "_ssr.js",
+      "_stores.js",
+      "_products.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/[categoryName]/+page.svelte"
+  },
+  "src/routes/[categoryName]/details/[id]/+page.js": {
+    "file": "entries/pages/_categoryName_/details/_id_/_page.js",
+    "imports": [
+      "_supabaseClient.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/[categoryName]/details/[id]/+page.js"
+  },
+  "src/routes/[categoryName]/details/[id]/+page.svelte": {
+    "file": "entries/pages/_categoryName_/details/_id_/_page.svelte.js",
+    "imports": [
+      "_ssr.js",
+      "_products.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/[categoryName]/details/[id]/+page.svelte"
+  },
+  "src/routes/account/+layout.js": {
+    "file": "entries/pages/account/_layout.js",
+    "isEntry": true,
+    "src": "src/routes/account/+layout.js"
+  },
+  "src/routes/account/+layout.svelte": {
+    "file": "entries/pages/account/_layout.svelte.js",
+    "imports": [
+      "_ssr.js",
+      "_authState.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/account/+layout.svelte"
+  },
+  "src/routes/account/[userId]/+page.svelte": {
+    "file": "entries/pages/account/_userId_/_page.svelte.js",
+    "imports": [
+      "_ssr.js",
+      "_stores.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/account/[userId]/+page.svelte"
+  },
+  "src/routes/cart/+page.svelte": {
+    "file": "entries/pages/cart/_page.svelte.js",
+    "imports": [
+      "_ssr.js",
+      "_functions.js",
+      "_products.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/cart/+page.svelte"
+  },
+  "src/routes/dashboard/+page.svelte": {
+    "file": "entries/pages/dashboard/_page.svelte.js",
+    "imports": [
+      "_ssr.js",
+      "_supabaseClient.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/dashboard/+page.svelte"
+  }
+}

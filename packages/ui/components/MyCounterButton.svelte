@@ -9,3 +9,4 @@
 <button on:click={handleClick}>
   clicks: {count}
 </button>
+<p>WTF</p>

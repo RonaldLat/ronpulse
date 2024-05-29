@@ -12,7 +12,7 @@ coverage
 .svelte-kit
 
 .netlify
-build
+build/*
 # misc
 .DS_Store
 *.pem

@@ -327,6 +327,16 @@ importers:
         version: 1.6.0
 
   apps/work-demo:
+    dependencies:
+      MyRon:
+        specifier: link:@repo/ui/components/MyRon
+        version: link:@repo/ui/components/MyRon
+      components:
+        specifier: link:@repo/ui/components
+        version: link:@repo/ui/components
+      ui:
+        specifier: link:@repo/ui
+        version: link:@repo/ui
     devDependencies:
       '@fontsource/fira-mono':
         specifier: ^4.5.10

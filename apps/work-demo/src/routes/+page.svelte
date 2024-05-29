@@ -2,6 +2,7 @@
 	import Counter from './Counter.svelte';
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
+	import { MyRon } from '@repo/ui';
 </script>
 
 <svelte:head>
@@ -9,6 +10,7 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
+<MyRon />
 <section>
 	<h1>
 		<span class="welcome">
@@ -21,6 +23,7 @@
 		to your new<br />SvelteKit app
 	</h1>
 
+	<h2>Learn svelte with Ron</h2>
 	<h2>
 		try editing <strong>src/routes/+page.svelte</strong>
 	</h2>

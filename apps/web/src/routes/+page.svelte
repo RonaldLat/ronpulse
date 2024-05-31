@@ -1,10 +1,15 @@
 <script lang="ts">
-	import { MyRon } from '@repo/ui';
-	import * as react from 'react';
-
-	console.log(react);
+	import { MyRon, GlowingGradientBtn, Hero1, MySon, Test } from '@repo/ui';
 </script>
 
-<h1>Web</h1>
+<h1 class="text-4xl">Web</h1>
 <MyRon />
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<GlowingGradientBtn />
+<p class="text-center underline">
+	Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation
+</p>
+<MyRon />
+<GlowingGradientBtn>Hello world!</GlowingGradientBtn>
+<MySon />
+<Hero1 />
+<Test />

@@ -18,15 +18,24 @@ importers:
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:packages/config-eslint
+      autoprefixer:
+        specifier: ^10.4.19
+        version: 10.4.19(postcss@8.4.38)
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
+      postcss:
+        specifier: ^8.4.38
+        version: 8.4.38
       prettier:
         specifier: ^3.2.5
         version: 3.2.5
       prettier-plugin-svelte:
         specifier: ^3.2.2
         version: 3.2.3(prettier@3.2.5)(svelte@4.2.17)
+      tailwindcss:
+        specifier: ^3.4.3
+        version: 3.4.3
       turbo:
         specifier: ^1.13.3
         version: 1.13.3
@@ -270,9 +279,6 @@ importers:
       '@repo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
-      react:
-        specifier: ^18.3.1
-        version: 18.3.1
     devDependencies:
       '@playwright/test':
         specifier: ^1.42.1
@@ -298,9 +304,15 @@ importers:
       '@typescript-eslint/parser':
         specifier: ^7.1.0
         version: 7.11.0(eslint@8.57.0)(typescript@5.4.5)
+      autoprefixer:
+        specifier: ^10.4.19
+        version: 10.4.19(postcss@8.4.38)
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
+      postcss:
+        specifier: ^8.4.38
+        version: 8.4.38
       prettier:
         specifier: ^3.2.5
         version: 3.2.5
@@ -313,6 +325,9 @@ importers:
       svelte-check:
         specifier: ^3.6.6
         version: 3.8.0(postcss@8.4.38)(svelte@4.2.17)
+      tailwindcss:
+        specifier: ^3.4.3
+        version: 3.4.3
       tslib:
         specifier: ^2.6.2
         version: 2.6.2
@@ -328,22 +343,13 @@ importers:
 
   apps/work-demo:
     dependencies:
-      MyRon:
-        specifier: link:@repo/ui/components/MyRon
-        version: link:@repo/ui/components/MyRon
-      components:
-        specifier: link:@repo/ui/components
-        version: link:@repo/ui/components
-      ui:
-        specifier: link:@repo/ui
-        version: link:@repo/ui
+      '@repo/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      '@ron/utils':
+        specifier: workspace:*
+        version: link:../../packages/utils
     devDependencies:
-      '@fontsource/fira-mono':
-        specifier: ^4.5.10
-        version: 4.5.10
-      '@neoconfetti/svelte':
-        specifier: ^1.0.0
-        version: 1.0.0
       '@sveltejs/adapter-auto':
         specifier: ^3.0.0
         version: 3.2.1(@sveltejs/kit@2.5.10)
@@ -356,6 +362,9 @@ importers:
       '@types/eslint':
         specifier: ^8.56.0
         version: 8.56.10
+      autoprefixer:
+        specifier: ^10.4.19
+        version: 10.4.19(postcss@8.4.38)
       eslint:
         specifier: ^8.56.0
         version: 8.57.0
@@ -365,6 +374,9 @@ importers:
       eslint-plugin-svelte:
         specifier: ^2.35.1
         version: 2.39.0(eslint@8.57.0)(svelte@4.2.17)
+      postcss:
+        specifier: ^8.4.38
+        version: 8.4.38
       prettier:
         specifier: ^3.1.1
         version: 3.2.5
@@ -377,6 +389,9 @@ importers:
       svelte-check:
         specifier: ^3.6.0
         version: 3.8.0(postcss@8.4.38)(svelte@4.2.17)
+      tailwindcss:
+        specifier: ^3.4.3
+        version: 3.4.3
       typescript:
         specifier: ^5.0.0
         version: 5.4.5
@@ -1479,10 +1494,6 @@ packages:
     resolution: {integrity: sha512-J4yDIIthosAsRZ5CPYP/jQvUAQtlZTTD/4suA08/FEnlxqW3sKS9iAhgsa9VYLZ6vDHn/ixJgIqRQPotoBjxIw==}
     dev: false
 
-  /@fontsource/fira-mono@4.5.10:
-    resolution: {integrity: sha512-bxUnRP8xptGRo8YXeY073DSpfK74XpSb0ZyRNpHV9WvLnJ7TwPOjZll8hTMin7zLC6iOp59pDZ8EQDj1gzgAQQ==}
-    dev: true
-
   /@gcornut/valibot-json-schema@0.0.27(@types/json-schema@7.0.15)(esbuild-runner@2.2.2)(esbuild@0.21.4)(valibot@0.30.0):
     resolution: {integrity: sha512-xcMaUStVgQzPrK3d7PuLFbQ+3qSp6LzaLExAm52E3FKmUfjQa7Sw5cDK6Hfu/8WT0yfGsuSCuJ5uT1sosjR9Qg==}
     hasBin: true
@@ -1697,10 +1708,6 @@ packages:
       hey-listen: 1.0.8
       tslib: 2.6.2
     dev: false
-
-  /@neoconfetti/svelte@1.0.0:
-    resolution: {integrity: sha512-SmksyaJAdSlMa9cTidVSIqYo1qti+WTsviNDwgjNVm+KQ3DRP2Df9umDIzC4vCcpEYY+chQe0i2IKnLw03AT8Q==}
-    dev: true
 
   /@nodelib/fs.scandir@2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -3770,10 +3777,6 @@ packages:
     dev: false
     optional: true
 
-  /js-tokens@4.0.0:
-    resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
-    dev: false
-
   /js-tokens@9.0.0:
     resolution: {integrity: sha512-WriZw1luRMlmV3LGJaR6QOJjWwgLUTf89OwT2lUOyjX2dJGBwgmIkbcz+7WFZjrZM635JOIR517++e/67CP9dQ==}
     dev: true
@@ -3863,13 +3866,6 @@ packages:
 
   /long@5.2.3:
     resolution: {integrity: sha512-lcHwpNoggQTObv5apGNCTdJrO69eHOZMi4BNC+rTLER8iHAqGrUVeLh/irVIM7zTw2bOXA8T6uNPeujwOLg/2Q==}
-    dev: false
-
-  /loose-envify@1.4.0:
-    resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
-    hasBin: true
-    dependencies:
-      js-tokens: 4.0.0
     dev: false
 
   /loupe@2.3.7:
@@ -4452,13 +4448,6 @@ packages:
   /react-is@18.3.1:
     resolution: {integrity: sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==}
     dev: true
-
-  /react@18.3.1:
-    resolution: {integrity: sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==}
-    engines: {node: '>=0.10.0'}
-    dependencies:
-      loose-envify: 1.4.0
-    dev: false
 
   /read-cache@1.0.0:
     resolution: {integrity: sha512-Owdv/Ft7IjOgm/i0xvNDZ1LrRANRfew4b2prF3OWMQLxLfu3bS8FVhCsrSCMK4lR56Y9ya+AThoTpDCTxCmpRA==}

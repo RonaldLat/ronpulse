@@ -2,8 +2,8 @@
   let name = 'finally working. congrats';
 </script>
 
-<div>
+<div class="p-1 bg-blue-500 flex flex-col mx-auto text-3xl">
   <p>We are just getting started baby</p>
   <span>{name}</span>
-  <span>Otieno</span>
+  <slot>Results of addition</slot>
 </div>

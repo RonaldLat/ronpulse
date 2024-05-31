@@ -11,8 +11,7 @@
     }
   },
   "scripts": {
-    "lint": "eslint .",
-    "build": "vite build"
+    "lint": "eslint ."
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",

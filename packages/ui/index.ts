@@ -8,5 +8,4 @@ export { default as GradientHeading } from './components/GradientHeading.svelte'
 export { default as BrowserMockup } from './components/BrowserMockup.svelte';
 export { default as RangeSlider1 } from './components/RangeSlider1.svelte';
 export { default as VerticalTimeline } from './components/VerticalTimeline.svelte';
-
-
+export { default as ScrollWithLight } from './components/ScrollWithLight.svelte';

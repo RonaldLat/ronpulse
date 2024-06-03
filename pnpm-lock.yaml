@@ -352,6 +352,9 @@ importers:
       '@supabase/supabase-js':
         specifier: ^2.43.4
         version: 2.43.4
+      '@tsparticles/engine':
+        specifier: ^3.4.0
+        version: 3.4.0
       install:
         specifier: ^0.13.0
         version: 0.13.0
@@ -2234,6 +2237,11 @@ packages:
 
   /@tokenizer/token@0.3.0:
     resolution: {integrity: sha512-OvjF+z51L3ov0OyAU0duzsYuvO01PH7x4t6DJx+guahgTnBHkhJdG7soQeTSFLWN3efnHyibZ4Z8l2EuWwJN3A==}
+    dev: false
+
+  /@tsparticles/engine@3.4.0:
+    resolution: {integrity: sha512-OqoMZYJCoiihNnexnnSmInEMNXr0Z8CmE1HSiFVeifgK1qUlonTFe2G09KdvNT8ZdvmIC513yTpFJNDbnMZYRQ==}
+    requiresBuild: true
     dev: false
 
   /@types/cookie@0.5.4:

@@ -5,8 +5,6 @@
 </script>
 
 <div class="app">
-	<p>{data.post.title}</p>
-
 	<main>
 		<slot />
 	</main>

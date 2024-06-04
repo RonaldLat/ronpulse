@@ -4,12 +4,10 @@
 	import 'swiper/css';
 	import 'swiper/css/effect-cube';
 	import 'swiper/css/autoplay';
-	import { Autoplay, EffectCube } from 'swiper/modules';
+	import { Autoplay, EffectCube, } from 'swiper/modules';
 
-	export let data;
-
-	const cakes = data.cakes;
-	console.log(data);
+  export let data;
+  console.log(data)
 
 	let swiper_element;
 
@@ -44,7 +42,7 @@
 				destinations, creating memories that will last a lifetime. You can uncover the hidden gems,
 				iconic landmarks, and unique cultural treasures that make each destination special.
 			</p>
-			<button class="bg-[#C56CD6]">Explore Tours</button>
+			<button>Explore Tours</button>
 		</div>
 
 		<div bind:this={swiper_element} class="swiper">
@@ -145,26 +143,47 @@
 		</div>
 	</section>
 
-	<section class="py-12">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="text-3xl font-extrabold text-gray-900 text-center mb-8">Our Delicious Cakes</h2>
-			<div class="grid">
-				{#each cakes as cake}
-					<div class="card">
-						<img class="w-full h-48 object-cover" src={cake.image} alt={cake.name} />
-						<div class="p-6">
-							<h3 class="text-lg font-bold text-gray-900 mb-2">{cake.name}</h3>
-							<p class="text-gray-700 mb-4">{cake.description}</p>
-							<p class="text-gray-900 font-semibold mb-4">KES {cake.price}</p>
-							<button class="bg-pink-500 text-white px-4 py-2 rounded-md hover:bg-pink-600"
-								>Order Now</button
-							>
-						</div>
-					</div>
-				{/each}
-			</div>
-		</div>
-	</section>
+
+
+  <div class="">
+
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-gray-900 text-center mb-8">Our Delicious Cakes</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Cake Item 1 -->
+                <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                    <img class="w-full h-48 object-cover" src="path_to_your_image.jpg" alt="Cake Image">
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Chocolate Berry Cake</h3>
+                        <p class="text-gray-700 mb-4">A delightful chocolate cake topped with fresh berries and a hint of mint.</p>
+                        <button class="bg-pink-500 text-white px-4 py-2 rounded-md hover:bg-pink-600">Order Now</button>
+                    </div>
+                </div>
+                <!-- Cake Item 2 -->
+                <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                    <img class="w-full h-48 object-cover" src="path_to_your_image.jpg" alt="Cake Image">
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Vanilla Dream Cake</h3>
+                        <p class="text-gray-700 mb-4">A classic vanilla cake with layers of creamy frosting and fresh strawberries.</p>
+                        <button class="bg-pink-500 text-white px-4 py-2 rounded-md hover:bg-pink-600">Order Now</button>
+                    </div>
+                </div>
+                <!-- Cake Item 3 -->
+                <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                    <img class="w-full h-48 object-cover" src="path_to_your_image.jpg" alt="Cake Image">
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Red Velvet Cake</h3>
+                        <p class="text-gray-700 mb-4">A rich red velvet cake with a smooth cream cheese frosting and a touch of elegance.</p>
+                        <button class="bg-pink-500 text-white px-4 py-2 rounded-md hover:bg-pink-600">Order Now</button>
+                    </div>
+                </div>
+                <!-- Add more cake items as needed -->
+            </div>
+        </div>
+    </section>
+
+</div>
 </body>
 
 <style>
@@ -180,8 +199,7 @@
 	}
 
 	body {
-		background-image:
-			radial-gradient(
+		background-image: radial-gradient(
 				circle at 20% 100%,
 				rgba(184, 184, 184, 0.1) 0%,
 				rgba(184, 184, 184, 0.1) 33%,
@@ -190,8 +208,7 @@
 				rgba(7, 7, 7, 0.1) 66%,
 				rgba(7, 7, 7, 0.1) 99%
 			),
-			/* linear-gradient(40deg, #040a22, #162561, #202e64, #6f7aa6); */
-				linear-gradient(40deg, #ffdee9, #ffacd3, #ff75a0, #ff4081);
+			linear-gradient(40deg, #040a22, #162561, #202e64, #6f7aa6);
 		background-repeat: no-repeat;
 		background-size: cover;
 	}

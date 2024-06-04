@@ -18,24 +18,8 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".gitpod.yml",
-        "hash": "13353227014301837725"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "874008746188159667"
-      },
-      {
-        "file": ".npmrc",
-        "hash": "3403154931541090305"
-      },
-      {
-        "file": "README.md",
-        "hash": "6158985774119965353"
-      },
-      {
-        "file": "pnpm-lock.yaml",
-        "hash": "7312760232627432816"
+        "file": ".vscode/settings.json",
+        "hash": "1409024233119639755"
       },
       {
         "file": "ronfiles/dot-config/nvim/.DS_Store",
@@ -46,36 +30,52 @@
         "hash": "868293989592330599"
       },
       {
-        "file": ".env",
-        "hash": "12194997757426930557"
+        "file": ".gitpod.yml",
+        "hash": "13353227014301837725"
       },
       {
-        "file": "pnpm-workspace.yaml",
-        "hash": "9750177317466281158"
-      },
-      {
-        "file": "ronfiles/nvim/.DS_Store",
-        "hash": "5268883578997703518"
-      },
-      {
-        "file": "turbo.json",
-        "hash": "12170411612179525653"
+        "file": "pnpm-lock.yaml",
+        "hash": "7312760232627432816"
       },
       {
         "file": ".prettierrc",
         "hash": "4522572780986822995"
       },
       {
-        "file": ".prettierignore",
-        "hash": "13553253234879909691"
-      },
-      {
-        "file": ".vscode/settings.json",
-        "hash": "1409024233119639755"
+        "file": "pnpm-workspace.yaml",
+        "hash": "9750177317466281158"
       },
       {
         "file": "package.json",
         "hash": "11399029259114288358"
+      },
+      {
+        "file": ".npmrc",
+        "hash": "3403154931541090305"
+      },
+      {
+        "file": "ronfiles/nvim/.DS_Store",
+        "hash": "5268883578997703518"
+      },
+      {
+        "file": "README.md",
+        "hash": "6158985774119965353"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "13553253234879909691"
+      },
+      {
+        "file": ".env",
+        "hash": "12194997757426930557"
+      },
+      {
+        "file": "turbo.json",
+        "hash": "12170411612179525653"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "874008746188159667"
       }
     ],
     "projectFileMap": {
@@ -9309,7 +9309,7 @@
         },
         {
           "file": "apps/work-demo/src/routes/+layout.svelte",
-          "hash": "1018317433577907055"
+          "hash": "10792038613827663160"
         },
         {
           "file": "apps/work-demo/src/routes/+page.server.js",

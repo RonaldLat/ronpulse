@@ -151,7 +151,11 @@
 			<div class="grid">
 				{#each cakes as cake}
 					<div class="card">
-						<img class="w-full h-48 object-cover" src="images/{cake.image}" alt={cake.name} />
+						<img
+							class="w-full h-48 object-cover bg-pink-500"
+							src="images/{cake.image}"
+							alt={cake.name}
+						/>
 						<div class="p-6">
 							<h3 class="text-lg font-bold text-gray-900 mb-2">{cake.name}</h3>
 							<p class="text-gray-700 mb-4">{cake.description}</p>

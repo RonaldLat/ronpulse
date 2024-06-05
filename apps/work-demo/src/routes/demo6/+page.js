@@ -7,7 +7,8 @@ export function load({ params }) {
 				name: 'Chocolate Berry Cake',
 				description: 'A delightful chocolate cake topped with fresh berries and a hint of mint.',
 				price: 2500,
-				image: 'blackforest1-transp.png'
+				// image: 'blackforest1-transp.png'
+				image: 'output.png'
 			},
 			{
 				name: 'Vanilla Dream Cake',

@@ -44,7 +44,7 @@
 				destinations, creating memories that will last a lifetime. You can uncover the hidden gems,
 				iconic landmarks, and unique cultural treasures that make each destination special.
 			</p>
-			<button class="bg-[#C56CD6]">Explore Tours</button>
+			<button class="bg-[#B39CD0] pl-3 btn">Our Delicacies</button>
 		</div>
 
 		<div bind:this={swiper_element} class="swiper">
@@ -151,7 +151,7 @@
 			<div class="grid">
 				{#each cakes as cake}
 					<div class="card">
-						<img class="w-full h-48 object-cover" src={cake.image} alt={cake.name} />
+						<img class="w-full h-48 object-cover" src="images/{cake.image}" alt={cake.name} />
 						<div class="p-6">
 							<h3 class="text-lg font-bold text-gray-900 mb-2">{cake.name}</h3>
 							<p class="text-gray-700 mb-4">{cake.description}</p>
@@ -229,7 +229,7 @@
 		color: #fff;
 	}
 
-	.content button {
+	.content b.utton {
 		background: #eaeaea;
 		color: #202134;
 		font-size: clamp(0.9rem, 4vw, 1rem);
@@ -243,7 +243,7 @@
 		cursor: pointer;
 	}
 
-	.content button:is(:hover, :focus) {
+	.content .button:is(:hover, :focus) {
 		transform: scale(0.98);
 		background-color: #6f7aa6;
 		color: #eaeaea;

@@ -88,7 +88,7 @@
 						<div class="p-6">
 							<h3 class="text-lg font-bold text-gray-900 mb-2">{cake.name}</h3>
 							<p class="text-gray-700 mb-4">{cake.description}</p>
-							<p class="text-gray-900 font-semibold mb-4">KES {cake.price}</p>
+							<p class="text-gray-900 font-semibold mb-4">KES. {cake.price}</p>
 							<button class="bg-pink-500 text-white px-4 py-2 rounded-md hover:bg-pink-600"
 								>Order Now</button
 							>

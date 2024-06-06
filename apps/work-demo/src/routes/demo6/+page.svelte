@@ -52,7 +52,7 @@
 			<div class="swiper-wrapper">
 				{#each cakes_slides as cake_slide}
 					<div class="swiper-slide">
-						<img src="images/{cake_slide.image}" />
+						<img src="nobg/{cake_slide.image}" />
 						<div class="cost dark-text">{cake_slide.price}</div>
 						<div class="overlay">
 							<h1>Japan Panoramic Tours</h1>

@@ -15,7 +15,7 @@ export function load({ params }) {
 				description:
 					'A classic vanilla cake with layers of creamy frosting and fresh strawberries.',
 				price: 2200,
-				image: 'pastries1.png'
+				image: 'pastries1x.png'
 			},
 			{
 				name: 'Red Velvet Cake',

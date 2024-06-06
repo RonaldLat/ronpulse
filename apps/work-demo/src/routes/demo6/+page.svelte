@@ -95,10 +95,10 @@
 </div>
 
                       
-<div class="max-w-xs overflow-hidden bg-gray-200 rounded-lg shadow-lg dark:bg-gray-800">
+<div class="max-w-xs overflow-hidden bg-gray-200 rounded-lg shadow-lg ">
     <div class="px-4 py-2">
-        <h1 class="text-xl font-bold text-gray-800 uppercase dark:text-white">{cake.name}</h1>
-        <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">{cake.description}</p>
+        <h1 class="text-xl font-bold text-gray-800 uppercase ">{cake.name}</h1>
+        <p class="mt-1 text-sm text-gray-600 ">{cake.description}</p>
     </div>
 
     <img class="object-contain w-full h-48 mt-2" src="nobg/{cake.image}" alt={cake.name}>

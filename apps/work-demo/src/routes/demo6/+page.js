@@ -38,7 +38,7 @@ export function load({ params }) {
 			},
 			{
 				name: 'Black Forest Cake',
-				description: 'blackforest1-transp.png',
+				description: 'blackforest1.png',
 				price: 2600,
 				image: 'path_to_your_image.jpg'
 			}
@@ -52,7 +52,7 @@ export function load({ params }) {
 				ratings: 4.8,
 				description: 'A delightful chocolate cake topped with fresh berries and a hint of mint.',
 				availableSizes: ['Small', 'Medium', 'Large'],
-				image: 'blackforest2.png'
+				image: 'carrrotcake4.png'
 			},
 			{
 				name: 'Vanilla Dream Cake',
@@ -62,7 +62,7 @@ export function load({ params }) {
 				description:
 					'A classic vanilla cake with layers of creamy frosting and fresh strawberries.',
 				availableSizes: ['Small', 'Medium', 'Large'],
-				image: 'images/carrrotcake1.png'
+				image: 'blackforest1.1.png'
 			},
 			{
 				name: 'Red Velvet Cake',
@@ -72,7 +72,7 @@ export function load({ params }) {
 				description:
 					'A rich red velvet cake with a smooth cream cheese frosting and a touch of elegance.',
 				availableSizes: ['Small', 'Medium', 'Large'],
-				image: 'images/carrrotcake2.png'
+				image: 'blackforest1.png'
 			},
 			{
 				name: 'Lemon Poppy Seed Cake',
@@ -90,7 +90,7 @@ export function load({ params }) {
 				ratings: 4.7,
 				description: 'A moist carrot cake with crunchy walnuts and a creamy cream cheese frosting.',
 				availableSizes: ['Small', 'Medium', 'Large'],
-				image: 'chocolatecake4.png'
+				image: 'blackforest4.png'
 			}
 		]
 	};

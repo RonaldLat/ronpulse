@@ -49,17 +49,14 @@
 		</div>
 
 		<div bind:this={swiper_element} class="swiper">
-			<div class="swiper-wrapper">
+			<div class="swiper-wrapper border-none bg-transparent">
 				{#each cakes_slides as cake_slide}
-					<div class="swiper-slide">
-						<img src="nobg/{cake_slide.image}" />
+					<div class="swiper-slide bg-transparent overflow-hidden">
+						<img src="nobg/{cake_slide.image}" class=" border border-pink-600" />
 						<div class="cost dark-text">{cake_slide.price}</div>
 						<div class="overlay">
-							<h1>Japan Panoramic Tours</h1>
-							<p>
-								Embark on a magical journey through Tokyo by discovering the beauty of the city as
-								cherry blossom trees paint the streets in hues of pink.
-							</p>
+							<h1>{cake_slide.name}</h1>
+							<p>{cake_slide.description}</p>
 							<div class="ratings">
 								<div class="stars">
 									<ion-icon class="star" name="star"></ion-icon>
@@ -84,8 +81,8 @@
 				{#each cakes as cake}
 					<div class="card">
 						<img
-							class="w-full h-48 object-cover bg-transparent"
-							src="images/{cake.image}"
+							class="w-full h-48 object-contain bg-auto"
+							src="nobg/{cake.image}"
 							alt={cake.name}
 						/>
 						<div class="p-6">

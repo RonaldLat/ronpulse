@@ -98,6 +98,68 @@
 			</div>
 		</div>
 	</section>
+
+	<section class=" overflow-hidden">
+		<div
+			class="max-w-screen-xl 2xl:max-w-screen-3xl px-8 md:px-12 mx-auto py-12 lg:py-24 space-y-24 h-auto flex flex-col justify-center"
+		>
+			<div class="flex flex-col sm:flex-row mx-auto">
+				<!--- Starts component -->
+				<a href="#_">
+					<img
+						src="https://images.unsplash.com/photo-1530035415911-95194de4ebcc?q=80&amp;w=2670&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+						class="rounded-xl rotate-6 hover:rotate-0 duration-500 hover:-translate-y-12 h-full w-full object-cover hover:scale-150 transform origin-bottom"
+						alt="#_"
+					/>
+				</a><a href="#_">
+					<img
+						src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?q=80&amp;w=2672&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D "
+						class="rounded-xl -rotate-12 hover:rotate-0 duration-500 hover:-translate-y-12 h-full w-full object-cover hover:scale-150 transform origin-bottom"
+						alt="#_"
+					/>
+				</a><a href="#_">
+					<img
+						src="https://images.unsplash.com/photo-1586996292898-71f4036c4e07?q=80&amp;w=2670&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+						class="rounded-xl rotate-6 hover:rotate-0 duration-500 hover:-translate-y-12 h-full w-full object-cover hover:scale-150 transform origin-bottom"
+						alt="#_"
+					/>
+				</a><a href="#_">
+					<img
+						src="https://images.unsplash.com/photo-1522775417749-29284fb89f43?q=80&amp;w=2574&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+						class="rounded-xl -rotate-12 hover:rotate-0 duration-500 hover:-translate-y-12 h-full w-full object-cover hover:scale-150 transform origin-bottom"
+						alt="#_"
+					/>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="text-gray-600 body-font">
+		<h2>Testimonials</h2>
+		<div class="container px-5 py-24 mx-auto">
+			<div class="flex flex-wrap -m-4">
+				<div class="lg:w-1/3 lg:mb-0 p-4">
+					<div class="h-full text-center">
+						<img
+							alt="testimonial"
+							class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
+							src="https://dummyimage.com/305x305"
+						/>
+						<p class="leading-relaxed">
+							Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's
+							cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag
+							drinking vinegar cronut adaptogen squid fanny pack vaporware.
+						</p>
+						<span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
+						<h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">
+							HENRY LETHAM
+						</h2>
+						<p class="text-gray-500">CTO</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </body>
 
 <style>

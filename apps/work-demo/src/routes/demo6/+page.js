@@ -15,14 +15,14 @@ export function load({ params }) {
 				description:
 					'A classic vanilla cake with layers of creamy frosting and fresh strawberries.',
 				price: 2200,
-				image: 'blackforest1-transp.png'
+				image: 'pastries1.png'
 			},
 			{
 				name: 'Red Velvet Cake',
 				description:
 					'A rich red velvet cake with a smooth cream cheese frosting and a touch of elegance.',
 				price: 2800,
-				image: 'blackforest1-transp.png'
+				image: 'carrrotcake2.png'
 			},
 			{
 				name: 'Lemon Poppy Seed Cake',
@@ -34,7 +34,7 @@ export function load({ params }) {
 				name: 'Carrot Walnut Cake',
 				description: 'A moist carrot cake with crunchy walnuts and a creamy cream cheese frosting.',
 				price: 2400,
-				image: 'blackforest1-transp.png'
+				image: 'carrrotcake1.png'
 			},
 			{
 				name: 'Black Forest Cake',
@@ -62,7 +62,7 @@ export function load({ params }) {
 				description:
 					'A classic vanilla cake with layers of creamy frosting and fresh strawberries.',
 				availableSizes: ['Small', 'Medium', 'Large'],
-				image: 'images/carrotcake1.png'
+				image: 'images/carrrotcake1.png'
 			},
 			{
 				name: 'Red Velvet Cake',
@@ -72,7 +72,7 @@ export function load({ params }) {
 				description:
 					'A rich red velvet cake with a smooth cream cheese frosting and a touch of elegance.',
 				availableSizes: ['Small', 'Medium', 'Large'],
-				image: 'images/carrotcake2.png'
+				image: 'images/carrrotcake2.png'
 			},
 			{
 				name: 'Lemon Poppy Seed Cake',
@@ -90,7 +90,7 @@ export function load({ params }) {
 				ratings: 4.7,
 				description: 'A moist carrot cake with crunchy walnuts and a creamy cream cheese frosting.',
 				availableSizes: ['Small', 'Medium', 'Large'],
-				image: 'chocolatecake3.png'
+				image: 'chocolatecake4.png'
 			}
 		]
 	};

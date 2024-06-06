@@ -45,7 +45,7 @@
 				destinations, creating memories that will last a lifetime. You can uncover the hidden gems,
 				iconic landmarks, and unique cultural treasures that make each destination special.
 			</p>
-			<button class="bg-[#B39CD0] pl-3 btn">Our Delicacies</button>
+			<button class=" bg-[#ffdee9] btn btn-ouline">Order Now</button>
 		</div>
 
 		<div bind:this={swiper_element} class="swiper">
@@ -77,62 +77,45 @@
 	<section class="py-12">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<h2 class="text-3xl font-extrabold text-gray-900 text-center mb-8">Our Delicious Cakes</h2>
-			<div class="grid">
+			<div class="grid md:grid-cols-2 gap-4">
 				{#each cakes as cake}
-					<div class="card">
-						<img
-							class="w-full h-48 object-contain bg-auto"
-							src="nobg/{cake.image}"
-							alt={cake.name}
-						/>
-						<div class="p-6">
-							<h3 class="text-lg font-bold text-gray-900 mb-2">{cake.name}</h3>
-							<p class="text-gray-700 mb-4">{cake.description}</p>
-							<p class="text-gray-900 font-semibold mb-4">KES. {cake.price}</p>
-							<button class="bg-pink-500 text-white px-4 py-2 rounded-md hover:bg-pink-600"
-								>Order Now</button
-							>
-						</div>
-					</div>
+
+          <div class="hidden flex flex-col items-center justify-center w-full max-w-sm mx-auto">
+    <div class="w-full h-64 bg-gray-300 bg-center bg-cover rounded-lg shadow-md" style="background-image: url(nobg/{cake.image})"></div>
+
+    <div class="w-56 -mt-10 overflow-hidden bg-white rounded-lg shadow-lg md:w-64 dark:bg-gray-800">
+        <h3 class="py-2 font-bold tracking-wide text-center text-gray-800 uppercase dark:text-white">{cake.name}</h3>
+
+        <div class="flex items-center justify-between px-3 py-2 bg-gray-200 dark:bg-gray-700">
+            <span class="font-bold text-gray-800 dark:text-gray-200">KES. {cake.price}</span>
+            <button class=" px-2 py-1 text-xs font-semibold text-white uppercase transition-colors duration-300 transform bg-gray-800 rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none">Add to cart</button>
+
+        </div>
+    </div>
+</div>
+
+                      
+<div class="max-w-xs overflow-hidden bg-gray-200 rounded-lg shadow-lg dark:bg-gray-800">
+    <div class="px-4 py-2">
+        <h1 class="text-xl font-bold text-gray-800 uppercase dark:text-white">{cake.name}</h1>
+        <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">{cake.description}</p>
+    </div>
+
+    <img class="object-contain w-full h-48 mt-2" src="nobg/{cake.image}" alt={cake.name}>
+
+    <div class="flex items-center justify-between px-4 py-2 bg-gray-900">
+        <h1 class="text-lg font-bold text-white">KES. {cake.price}</h1>
+        <button class="px-2 py-1 text-xs font-semibold text-gray-900 uppercase transition-colors duration-300 transform bg-gray-100 rounded hover:bg-[#ff75a0] focus:bg-gray-400 focus:outline-none">Add to cart</button>
+    </div>
+</div>
+
+
+
 				{/each}
 			</div>
 		</div>
 	</section>
 
-	<section class=" overflow-hidden">
-		<div
-			class="max-w-screen-xl 2xl:max-w-screen-3xl px-8 md:px-12 mx-auto py-12 lg:py-24 space-y-24 h-auto flex flex-col justify-center"
-		>
-			<div class="flex flex-col sm:flex-row mx-auto">
-				<!--- Starts component -->
-				<a href="#_">
-					<img
-						src="https://images.unsplash.com/photo-1530035415911-95194de4ebcc?q=80&amp;w=2670&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-						class="rounded-xl rotate-6 hover:rotate-0 duration-500 hover:-translate-y-12 h-full w-full object-cover hover:scale-150 transform origin-bottom"
-						alt="#_"
-					/>
-				</a><a href="#_">
-					<img
-						src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?q=80&amp;w=2672&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D "
-						class="rounded-xl -rotate-12 hover:rotate-0 duration-500 hover:-translate-y-12 h-full w-full object-cover hover:scale-150 transform origin-bottom"
-						alt="#_"
-					/>
-				</a><a href="#_">
-					<img
-						src="https://images.unsplash.com/photo-1586996292898-71f4036c4e07?q=80&amp;w=2670&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-						class="rounded-xl rotate-6 hover:rotate-0 duration-500 hover:-translate-y-12 h-full w-full object-cover hover:scale-150 transform origin-bottom"
-						alt="#_"
-					/>
-				</a><a href="#_">
-					<img
-						src="https://images.unsplash.com/photo-1522775417749-29284fb89f43?q=80&amp;w=2574&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-						class="rounded-xl -rotate-12 hover:rotate-0 duration-500 hover:-translate-y-12 h-full w-full object-cover hover:scale-150 transform origin-bottom"
-						alt="#_"
-					/>
-				</a>
-			</div>
-		</div>
-	</section>
 
 	<section class="text-gray-600 body-font">
 		<h2>Testimonials</h2>
@@ -160,6 +143,44 @@
 			</div>
 		</div>
 	</section>
+
+  <footer class="text-gray-600 body-font">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+    <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-pink-500 rounded-full" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <span class="ml-3 text-xl">Tailblocks</span>
+    </a>
+    <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2020 Tailblocks —
+      <a href="https://twitter.com/knyttneve" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@knyttneve</a>
+    </p>
+    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+      <a class="text-gray-500">
+        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+          <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+        </svg>
+      </a>
+      <a class="ml-3 text-gray-500">
+        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+          <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+        </svg>
+      </a>
+      <a class="ml-3 text-gray-500">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+          <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+        </svg>
+      </a>
+      <a class="ml-3 text-gray-500">
+        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+          <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+          <circle cx="4" cy="4" r="2" stroke="none"></circle>
+        </svg>
+      </a>
+    </span>
+  </div>
+</footer>
 </body>
 
 <style>
@@ -168,8 +189,8 @@
 	*,
 	*::before,
 	*::after {
-		margin: 0;
-		padding: 0;
+		/* margin: 0; */
+		/* padding: 0; */
 		box-sizing: border-box;
 		font-family: 'Nunito', sans-serif;
 	}

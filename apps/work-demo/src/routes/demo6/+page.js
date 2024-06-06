@@ -15,7 +15,7 @@ export function load({ params }) {
 				description:
 					'A classic vanilla cake with layers of creamy frosting and fresh strawberries.',
 				price: 2200,
-				image: 'pastries1x.png'
+				image: 'vanillacake1.png'
 			},
 			{
 				name: 'Red Velvet Cake',
@@ -34,14 +34,8 @@ export function load({ params }) {
 				name: 'Carrot Walnut Cake',
 				description: 'A moist carrot cake with crunchy walnuts and a creamy cream cheese frosting.',
 				price: 2400,
-				image: 'carrrotcake1.png'
+				image: 'carrrotcake3.png'
 			},
-			{
-				name: 'Black Forest Cake',
-				description: 'blackforest1.png',
-				price: 2600,
-				image: 'path_to_your_image.jpg'
-			}
 		],
 
 		cakes_slides: [

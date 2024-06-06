@@ -95,7 +95,7 @@
 </div>
 
                       
-<div class="max-w-xs overflow-hidden bg-gray-200 rounded-lg shadow-lg ">
+<div class="max-w-md w-full overflow-hidden bg-gray-200 rounded-lg shadow-lg ">
     <div class="px-4 py-2">
         <h1 class="text-xl font-bold text-gray-800 uppercase ">{cake.name}</h1>
         <p class="mt-1 text-sm text-gray-600 ">{cake.description}</p>

@@ -37,7 +37,7 @@
 <body>
 	<section class="mb-28">
 		<div class="content">
-			<h1>Let's Travel The World Together!</h1>
+			<h1 class="text-5xl text-gray-200 tracking-wide uppercase font-semibold">Business Name</h1>
 			<p>
 				Our tours are designed to transport you to the heart of the world's most captivating
 				destinations, creating memories that will last a lifetime. You can uncover the hidden gems,
@@ -104,7 +104,7 @@
 	*::after {
 		/* margin: 0; */
 		/* padding: 0; */
-		box-sizing: border-box;
+		/* box-sizing: border-box; */
 		font-family: 'Nunito', sans-serif;
 	}
 
@@ -154,12 +154,12 @@
 
 	.content h1 {
 		font-family: 'Comfortaa', sans-serif;
-		font-size: clamp(2rem, 4vw, 3.5rem);
-		font-weight: 700;
-		line-height: 1.2;
-		letter-spacing: 1px;
-		margin-bottom: 36px;
-		color: #fff;
+		/* font-size: clamp(2rem, 4vw, 3.5rem); */
+		/* font-weight: 700; */
+		/* line-height: 1.2; */
+		/* letter-spacing: 1px; */
+		/* margin-bottom: 36px; */
+		/* color: #fff; */
 	}
 
 	.content p {

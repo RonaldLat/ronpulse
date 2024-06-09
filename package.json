@@ -5,6 +5,7 @@
     "build": "turbo run build",
     "dev": "dotenv -- turbo run dev",
     "dev-work": "dotenv -- turbo run dev --filter=work-demo",
+    "dev-eballers": "dotenv -- turbo run dev --filter=eballers",
     "lint": "turbo run lint",
     "format": "prettier --write .",
     "graph": "npx nx graph"

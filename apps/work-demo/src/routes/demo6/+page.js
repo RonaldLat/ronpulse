@@ -1,7 +1,8 @@
 /** @type {import('./$types').PageLoad} */
-export function load({ params }) {
+export function load({ params,data }) {
 	return {
 		/**type {Object}*/
+    data,
 		cakes: [
 			{
 				name: 'Chocolate Berry Cake',

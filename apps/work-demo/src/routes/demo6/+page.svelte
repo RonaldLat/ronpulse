@@ -6,11 +6,12 @@
 	import 'swiper/css/autoplay';
 	import { Autoplay, EffectCube } from 'swiper/modules';
 
+
 	export let data;
+  console.log(data)
 
 	const cakes = data.cakes;
 	const cakes_slides = data.cakes_slides;
-	console.log(data);
 
 	let swiper_element;
 
@@ -37,7 +38,8 @@
 </script>
 
 <body>
-	<section>
+    <h1 class="text-center pt-4 text-5xl">X Bakeries</h1>
+	<section class="section h-fit min-h-screen">
 		<div class="content">
 			<h1>Let's Travel The World Together!</h1>
 			<p>
@@ -51,22 +53,12 @@
 		<div bind:this={swiper_element} class="swiper">
 			<div class="swiper-wrapper border-none bg-transparent">
 				{#each cakes_slides as cake_slide}
-					<div class="swiper-slide bg-transparent overflow-hidden">
-						<img src="nobg/{cake_slide.image}" class=" border border-pink-600" />
-						<div class="cost dark-text">{cake_slide.price}</div>
+					<div class="swiper-slide opacity-1 h-auto overflow-hidden">
+						<img src="nobg/{cake_slide.image}" class="h-full border border-pink-600" />
+						<div class="cost text-xs text-gray-600 font-semibold shadow-md bg-[#ff75a0] ">{cake_slide.price}</div>
 						<div class="overlay">
 							<h1>{cake_slide.name}</h1>
 							<p>{cake_slide.description}</p>
-							<div class="ratings">
-								<div class="stars">
-									<ion-icon class="star" name="star"></ion-icon>
-									<ion-icon class="star" name="star"></ion-icon>
-									<ion-icon class="star" name="star"></ion-icon>
-									<ion-icon class="star" name="star"></ion-icon>
-									<ion-icon class="star" name="star-outline"></ion-icon>
-								</div>
-								<span>619 reviews</span>
-							</div>
 						</div>
 					</div>
 				{/each}
@@ -74,112 +66,68 @@
 		</div>
 	</section>
 
-	<section class="py-12">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="text-3xl font-extrabold text-gray-900 text-center mb-8">Our Delicious Cakes</h2>
-			<div class="grid md:grid-cols-2 gap-4">
-				{#each cakes as cake}
+  <section class="py-12 w-full ">
+    <div class=" w-full  mx-auto px-4 md:px-16  ">
+      <h2 class="text-3xl font-extrabold text-gray-900 text-center mb-8">Our Delicious Cakes</h2>
+      <div class="grid w-full place-items-center bg-blue-300 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {#each cakes as cake}
+          <div class="max-w-md w-full overflow-hidden bg-gray-200 rounded-lg shadow-lg ">
+            <div class="px-4 py-2">
+              <h1 class="text-xl font-bold text-gray-800 uppercase ">{cake.name}</h1>
+              <p class="mt-1 text-sm text-gray-600 ">{cake.description}</p>
+            </div>
 
-          <div class="hidden flex flex-col items-center justify-center w-full max-w-sm mx-auto">
-    <div class="w-full h-64 bg-gray-300 bg-center bg-cover rounded-lg shadow-md" style="background-image: url(nobg/{cake.image})"></div>
+            <img class="object-contain w-full h-48 mt-2" src="nobg/{cake.image}" alt={cake.name}>
 
-    <div class="w-56 -mt-10 overflow-hidden bg-white rounded-lg shadow-lg md:w-64 dark:bg-gray-800">
-        <h3 class="py-2 font-bold tracking-wide text-center text-gray-800 uppercase dark:text-white">{cake.name}</h3>
+            <div class="flex items-center justify-between px-4 py-2 bg-gray-900">
+              <h1 class="text-lg font-bold text-white">KES. {cake.price}</h1>
+              <button class="px-2 py-1 text-xs font-semibold text-gray-900 uppercase transition-colors duration-300 transform bg-gray-100 rounded hover:bg-[#ff75a0] focus:bg-gray-400 focus:outline-none">Add to cart</button>
+            </div>
+          </div>
+        {/each}
 
-        <div class="flex items-center justify-between px-3 py-2 bg-gray-200 dark:bg-gray-700">
-            <span class="font-bold text-gray-800 dark:text-gray-200">KES. {cake.price}</span>
-            <button class=" px-2 py-1 text-xs font-semibold text-white uppercase transition-colors duration-300 transform bg-gray-800 rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none">Add to cart</button>
-
-        </div>
+      </div>
     </div>
-</div>
-
-                      
-<div class="max-w-md w-full overflow-hidden bg-gray-200 rounded-lg shadow-lg ">
-    <div class="px-4 py-2">
-        <h1 class="text-xl font-bold text-gray-800 uppercase ">{cake.name}</h1>
-        <p class="mt-1 text-sm text-gray-600 ">{cake.description}</p>
-    </div>
-
-    <img class="object-contain w-full h-48 mt-2" src="nobg/{cake.image}" alt={cake.name}>
-
-    <div class="flex items-center justify-between px-4 py-2 bg-gray-900">
-        <h1 class="text-lg font-bold text-white">KES. {cake.price}</h1>
-        <button class="px-2 py-1 text-xs font-semibold text-gray-900 uppercase transition-colors duration-300 transform bg-gray-100 rounded hover:bg-[#ff75a0] focus:bg-gray-400 focus:outline-none">Add to cart</button>
-    </div>
-</div>
+  </section>
 
 
-
-				{/each}
-			</div>
-		</div>
-	</section>
-
-
-	<section class="text-gray-600 body-font">
-		<h2>Testimonials</h2>
-		<div class="container px-5 py-24 mx-auto">
-			<div class="flex flex-wrap -m-4">
-				<div class="lg:w-1/3 lg:mb-0 p-4">
-					<div class="h-full text-center">
-						<img
-							alt="testimonial"
-							class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-							src="https://dummyimage.com/305x305"
-						/>
-						<p class="leading-relaxed">
-							Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's
-							cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag
-							drinking vinegar cronut adaptogen squid fanny pack vaporware.
-						</p>
-						<span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
-						<h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">
-							HENRY LETHAM
-						</h2>
-						<p class="text-gray-500">CTO</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
 
   <footer class="text-gray-600 body-font">
-  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-    <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-pink-500 rounded-full" viewBox="0 0 24 24">
-        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-      </svg>
-      <span class="ml-3 text-xl">Tailblocks</span>
-    </a>
-    <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2020 Tailblocks —
-      <a href="https://twitter.com/knyttneve" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@knyttneve</a>
-    </p>
-    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-      <a class="text-gray-500">
-        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-          <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-pink-500 rounded-full" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
         </svg>
+        <span class="ml-3 text-xl">Tailblocks</span>
       </a>
-      <a class="ml-3 text-gray-500">
-        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-          <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-        </svg>
-      </a>
-      <a class="ml-3 text-gray-500">
-        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-          <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-          <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-        </svg>
-      </a>
-      <a class="ml-3 text-gray-500">
-        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
-          <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
-          <circle cx="4" cy="4" r="2" stroke="none"></circle>
-        </svg>
-      </a>
-    </span>
-  </div>
+      <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2020 Tailblocks —
+        <a href="https://twitter.com/knyttneve" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@knyttneve</a>
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a class="text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </span>
+    </div>
 </footer>
 </body>
 
@@ -212,7 +160,7 @@
 		background-size: cover;
 	}
 
-	section {
+	.xection {
 		display: grid;
 		grid-template-columns: 50% 45%;
 		place-items: center;
@@ -245,19 +193,6 @@
 		color: #fff;
 	}
 
-	.content b.utton {
-		background: #eaeaea;
-		color: #202134;
-		font-size: clamp(0.9rem, 4vw, 1rem);
-		font-weight: 600;
-		border: 0;
-		outline: 0;
-		padding: 8px 14px;
-		border-radius: 7px;
-		transform: scale(1);
-		transition: all 0.4s ease-in;
-		cursor: pointer;
-	}
 
 	.content .button:is(:hover, :focus) {
 		transform: scale(0.98);
@@ -286,15 +221,10 @@
 		position: absolute;
 		top: 8px;
 		right: 6px;
-		background: rgba(255, 255, 255, 0.3);
-		backdrop-filter: blur(6px);
-		-webkit-backdrop-filter: blur(6px);
 		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
 		border-radius: 30px;
 		padding: 6px 10px;
-		color: #fff;
-		font-size: clamp(0.8rem, 4vw, 0.9rem);
-		font-weight: 600;
+		/* font-size: clamp(0.8rem, 4vw, 0.9rem); */
 	}
 
 	.dark-text {
@@ -359,7 +289,7 @@
 	}
 
 	@media (max-width: 930px) {
-		section {
+		.xection {
 			grid-template-columns: 100%;
 			grid-template-rows: 55% 40%;
 			grid-template-areas:
@@ -385,7 +315,7 @@
 	}
 
 	@media (max-width: 470px) {
-		section {
+		xection {
 			padding: 40px 40px 60px;
 		}
 

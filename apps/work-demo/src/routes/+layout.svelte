@@ -4,7 +4,7 @@
 	export let data;
 </script>
 
-<div class="app">
+<div class="app overflow-hidden">
 	<main>
 		<slot />
 	</main>

@@ -4,7 +4,8 @@ export function load({ params }) {
 		/**type {Object}*/
 		post: {
 			title: `Title for ${params.id || "business name"} goes here`,
-			content: `Content for ${params.id || "business name" } goes here`
+			content: `Content for ${params.id || "business name" } goes here`,
+      phone_number: '0725000000'
 		}
 	};
 }

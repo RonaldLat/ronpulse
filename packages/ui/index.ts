@@ -9,3 +9,5 @@ export { default as BrowserMockup } from './components/BrowserMockup.svelte';
 export { default as RangeSlider1 } from './components/RangeSlider1.svelte';
 export { default as VerticalTimeline } from './components/VerticalTimeline.svelte';
 export { default as ScrollWithLight } from './components/ScrollWithLight.svelte';
+export { default as LoginForm } from './components/LoginForm.svelte';
+export { default as RegisterForm } from './components/RegisterForm.svelte';

@@ -216,7 +216,7 @@ importers:
   apps/eballers:
     dependencies:
       '@repo/ui':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../packages/ui
       pocketbase:
         specifier: ^0.21.3

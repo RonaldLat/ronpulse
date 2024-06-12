@@ -20,7 +20,7 @@
 				+44 744 857321
 			</button>
 		</div>
-		<div class="block lg:hidden">
+		<div class="hidden block lg:hidden">
 			<button
 				id="nav-toggle"
 				class="flex items-center px-3 py-2 border rounded text-gray-500 border-blue-500"

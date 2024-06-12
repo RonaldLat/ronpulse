@@ -1,326 +1,416 @@
-<script>
-	import { ScrollWithLight } from '@repo/ui';
-</script>
+<!--
+// v0 by Vercel.
+// https://v0.dev/t/MmlXgnKKwpE
+-->
 
-<body>
-	<div id="tsparticles"></div>
-	<section>
-		<div class="content">
-			<h1>Let's Travel The World Together!</h1>
-			<p>
-				Our tours are designed to transport you to the heart of the world's most captivating
-				destinations, creating memories that will last a lifetime. You can uncover the hidden gems,
-				iconic landmarks, and unique cultural treasures that make each destination special.
-			</p>
-			<button>Explore Tours</button>
-		</div>
 
-		<div class="swiper">
-			<div class="swiper-wrapper">
-				<div class="swiper-slide">
-					<img
-						src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/49db1b5f-09f6-4433-be57-51687585600c"
-					/>
-					<div class="cost">from $230 per group</div>
-					<div class="overlay">
-						<h1>Walking Tour in Florence</h1>
-						<p>
-							Discover the fascinating beauty of this historic city by strolling through the rich
-							cultural tapestry that makes Florence a timeless destination.
-						</p>
-						<div class="ratings">
-							<div class="stars">
-								<ion-icon class="star" name="star"></ion-icon>
-								<ion-icon class="star" name="star"></ion-icon>
-								<ion-icon class="star" name="star"></ion-icon>
-								<ion-icon class="star" name="star"></ion-icon>
-								<ion-icon class="star" name="star-half-outline"></ion-icon>
-							</div>
-							<span>138 reviews</span>
-						</div>
-					</div>
-				</div>
-				<div class="swiper-slide">
-					<img
-						src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/2d165721-fe2e-4cf0-a63e-20bc5bc3f847"
-					/>
-					<div class="cost">from $380 per group</div>
-					<div class="overlay">
-						<h1>Edinburgh Guided Tour</h1>
-						<p>
-							Explore the city's majestic castles and fascinating history by joining our guided tour
-							for an unforgettable journey through Scotland's capital.
-						</p>
-						<div class="ratings">
-							<div class="stars">
-								<ion-icon class="star" name="star"></ion-icon>
-								<ion-icon class="star" name="star"></ion-icon>
-								<ion-icon class="star" name="star"></ion-icon>
-								<ion-icon class="star" name="star"></ion-icon>
-								<ion-icon class="star" name="star"></ion-icon>
-							</div>
-							<span>307 reviews</span>
-						</div>
-					</div>
-				</div>
-				<div class="swiper-slide">
-					<img
-						src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/d311d1de-7382-4c03-b083-5f7e88458158"
-					/>
-					<div class="cost dark-text">from $99 per adult</div>
-					<div class="overlay">
-						<h1>New York Sightseeing Tour</h1>
-						<p>
-							Experience the energy and excitement of New York City from Times Square's dazzling
-							lights to the serene beauty of Central Park.
-						</p>
-						<div class="ratings">
-							<div class="stars">
-								<ion-icon class="star" name="star"></ion-icon>
-								<ion-icon class="star" name="star"></ion-icon>
-								<ion-icon class="star" name="star"></ion-icon>
-								<ion-icon class="star" name="star"></ion-icon>
-								<ion-icon class="star" name="star-half-outline"></ion-icon>
-							</div>
-							<span>1152 reviews</span>
-						</div>
-					</div>
-				</div>
-				<div class="swiper-slide">
-					<img
-						src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/be223a30-52d1-4a0b-8d57-2e52f02e2245"
-					/>
-					<div class="cost dark-text">from $117 per adult</div>
-					<div class="overlay">
-						<h1>Japan Panoramic Tours</h1>
-						<p>
-							Embark on a magical journey through Tokyo by discovering the beauty of the city as
-							cherry blossom trees paint the streets in hues of pink.
-						</p>
-						<div class="ratings">
-							<div class="stars">
-								<ion-icon class="star" name="star"></ion-icon>
-								<ion-icon class="star" name="star"></ion-icon>
-								<ion-icon class="star" name="star"></ion-icon>
-								<ion-icon class="star" name="star"></ion-icon>
-								<ion-icon class="star" name="star-outline"></ion-icon>
-							</div>
-							<span>619 reviews</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-</body>
-
-<style>
-	@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Nunito:wght@300;600&display=swap');
-
-	*,
-	*::before,
-	*::after {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-		font-family: 'Nunito', sans-serif;
-	}
-
-	body {
-		background-image: radial-gradient(
-				circle at 20% 100%,
-				rgba(184, 184, 184, 0.1) 0%,
-				rgba(184, 184, 184, 0.1) 33%,
-				rgba(96, 96, 96, 0.1) 33%,
-				rgba(96, 96, 96, 0.1) 66%,
-				rgba(7, 7, 7, 0.1) 66%,
-				rgba(7, 7, 7, 0.1) 99%
-			),
-			linear-gradient(40deg, #040a22, #162561, #202e64, #6f7aa6);
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
-
-	section {
-		display: grid;
-		grid-template-columns: 50% 45%;
-		place-items: center;
-		gap: 60px;
-		min-height: 100vh;
-		padding: 20px 60px;
-	}
-
-	/* CONTENT */
-
-	.content {
-		max-width: 2400px;
-	}
-
-	.content h1 {
-		font-family: 'Comfortaa', sans-serif;
-		font-size: clamp(2rem, 4vw, 3.5rem);
-		font-weight: 700;
-		line-height: 1.2;
-		letter-spacing: 1px;
-		margin-bottom: 36px;
-		color: #fff;
-	}
-
-	.content p {
-		font-size: clamp(1rem, 4vw, 1.1rem);
-		font-weight: 300;
-		line-height: 1.5;
-		margin-bottom: 30px;
-		color: #fff;
-	}
-
-	.content button {
-		background: #eaeaea;
-		color: #202134;
-		font-size: clamp(0.9rem, 4vw, 1rem);
-		font-weight: 600;
-		border: 0;
-		outline: 0;
-		padding: 8px 14px;
-		border-radius: 7px;
-		transform: scale(1);
-		transition: all 0.4s ease-in;
-		cursor: pointer;
-	}
-
-	.content button:is(:hover, :focus) {
-		transform: scale(0.98);
-		background-color: #6f7aa6;
-		color: #eaeaea;
-	}
-
-	/* SLIDER */
-
-	.swiper {
-		position: relative;
-		width: 400px;
-		height: 490px;
-	}
-
-	.swiper-slide {
-		position: relative;
-		background-position: center;
-		background-size: cover;
-		border: 1px solid rgba(255, 255, 255, 0.3);
-		user-select: none;
-		border-radius: 20px;
-	}
-
-	.cost {
-		position: absolute;
-		top: 8px;
-		right: 6px;
-		background: rgba(255, 255, 255, 0.3);
-		backdrop-filter: blur(6px);
-		-webkit-backdrop-filter: blur(6px);
-		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-		border-radius: 30px;
-		padding: 6px 10px;
-		color: #fff;
-		font-size: clamp(0.8rem, 4vw, 0.9rem);
-		font-weight: 600;
-	}
-
-	.dark-text {
-		color: #202134;
-	}
-
-	.swiper-slide img {
-		width: 100%;
-		height: 100%;
-		border-radius: 20px;
-	}
-
-	.overlay {
-		position: absolute;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		left: 0;
-		bottom: 0;
-		width: 100%;
-		height: 150px;
-		padding: 10px 20px;
-		background: rgba(93, 95, 145, 0.2);
-		backdrop-filter: blur(20px);
-		-webkit-backdrop-filter: blur(20px);
-		border-top: 1px solid rgba(255, 255, 255, 0.3);
-		color: #fff;
-		border-radius: 0 0 20px 20px;
-	}
-
-	.overlay h1 {
-		font-size: clamp(1.2rem, 4vw, 1.5rem);
-		font-weight: 600;
-	}
-
-	.overlay p {
-		font-size: clamp(0.8rem, 4vw, 0.9rem);
-		font-weight: 300;
-		line-height: 1.3;
-	}
-
-	.ratings {
-		display: flex;
-		column-gap: 10px;
-		margin-top: -6px;
-	}
-
-	.ratings span {
-		font-size: clamp(0.8rem, 4vw, 0.9rem);
-		font-weight: 300;
-	}
-
-	.star {
-		color: #afe312;
-	}
-
-	@media (max-width: 1050px) {
-		.swiper {
-			width: 350px;
-			height: 450px;
-		}
-	}
-
-	@media (max-width: 930px) {
-		section {
-			grid-template-columns: 100%;
-			grid-template-rows: 55% 40%;
-			grid-template-areas:
-				'slider'
-				'content';
-			place-items: center;
-			gap: 64px;
-			padding: 60px;
-		}
-
-		.swiper {
-			grid-area: slider;
-		}
-
-		.content {
-			grid-area: content;
-			text-align: center;
-		}
-
-		.content h1 {
-			margin-bottom: 20px;
-		}
-	}
-
-	@media (max-width: 470px) {
-		section {
-			padding: 40px 40px 60px;
-		}
-
-		.swiper {
-			width: 300px;
-			height: 400px;
-		}
-	}
-</style>
+<div class="flex flex-col min-h-[100dvh]">
+  <header class="px-4 lg:px-6 h-14 flex items-center bg-[#0D0D0D] text-white">
+    <a class="flex items-center justify-center" href="#">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="h-6 w-6"
+      >
+        <path d="M14.4 14.4 9.6 9.6"></path>
+        <path d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z"></path>
+        <path d="m21.5 21.5-1.4-1.4"></path>
+        <path d="M3.9 3.9 2.5 2.5"></path>
+        <path d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z"></path>
+      </svg>
+      <span class="sr-only">Fitness Gym</span>
+    </a>
+    <nav class="ml-auto flex gap-4 sm:gap-6">
+      <a class="text-sm font-medium hover:underline underline-offset-4" href="#">
+        About
+      </a>
+      <a class="text-sm font-medium hover:underline underline-offset-4" href="#">
+        Classes
+      </a>
+      <a class="text-sm font-medium hover:underline underline-offset-4" href="#">
+        Trainers
+      </a>
+      <a href="#" class="text-sm font-medium hover:underline underline-offset-4">
+        Contact
+      </a>
+    </nav>
+  </header>
+  <main class="flex-1">
+    <section class="w-full bg-[#0D0D0D] text-white">
+      <div
+        aria-roledescription="carousel"
+        class="relative w-full h-[500px] md:h-[600px] lg:h-[700px]"
+        role="region"
+      >
+        <div class="overflow-hidden">
+          <div class="flex -ml-4" style="transform: translate3d(0px, 0px, 0px);">
+            <div aria-roledescription="slide" class="min-w-0 shrink-0 grow-0 basis-full pl-4" role="group">
+              <img
+                src="/placeholder.svg"
+                width="1920"
+                height="1080"
+                alt="Hero"
+                class="w-full h-full object-cover"
+                style="aspect-ratio: 1920 / 1080; object-fit: cover;"
+              />
+            </div>
+            <div aria-roledescription="slide" class="min-w-0 shrink-0 grow-0 basis-full pl-4" role="group">
+              <img
+                src="/placeholder.svg"
+                width="1920"
+                height="1080"
+                alt="Hero"
+                class="w-full h-full object-cover"
+                style="aspect-ratio: 1920 / 1080; object-fit: cover;"
+              />
+            </div>
+            <div aria-roledescription="slide" class="min-w-0 shrink-0 grow-0 basis-full pl-4" role="group">
+              <img
+                src="/placeholder.svg"
+                width="1920"
+                height="1080"
+                alt="Hero"
+                class="w-full h-full object-cover"
+                style="aspect-ratio: 1920 / 1080; object-fit: cover;"
+              />
+            </div>
+          </div>
+        </div>
+        <button
+          class="inline-flex shrink-0 items-center justify-center whitespace-nowrap text-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background font-medium shadow-sm hover:bg-accent hover:text-accent-foreground absolute h-8 w-8 rounded-full -left-12 top-1/2 -translate-y-1/2"
+          disabled=""
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-arrow-left h-4 w-4"
+          >
+            <path d="m12 19-7-7 7-7"></path>
+            <path d="M19 12H5"></path>
+          </svg>
+          <span class="sr-only">Previous slide</span>
+        </button>
+        <button class="inline-flex shrink-0 items-center justify-center whitespace-nowrap text-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background font-medium shadow-sm hover:bg-accent hover:text-accent-foreground absolute h-8 w-8 rounded-full -right-12 top-1/2 -translate-y-1/2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-arrow-right h-4 w-4"
+          >
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+          <span class="sr-only">Next slide</span>
+        </button>
+      </div>
+      <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+        <div class="container px-4 md:px-6 py-12 md:py-24 lg:py-32 grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+          <div class="flex flex-col justify-center space-y-4">
+            <div class="space-y-2">
+              <h1 class="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                Unlock Your Fitness Potential
+              </h1>
+              <p class="max-w-[600px] text-gray-300 md:text-xl">
+                Experience the ultimate fitness journey at our state-of-the-art gym. Elevate your workouts and
+                transform your body.
+              </p>
+            </div>
+            <div class="flex flex-col gap-2 min-[400px]:flex-row">
+              <a
+                href="#"
+                class="inline-flex h-10 items-center justify-center rounded-md bg-[#FF6B6B] px-8 text-sm font-medium text-white shadow transition-colors hover:bg-[#FF4D4D] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#FF6B6B] disabled:pointer-events-none disabled:opacity-50"
+              >
+                Join Now
+              </a>
+              <a
+                href="#"
+                class="inline-flex h-10 items-center justify-center rounded-md border border-[#FF6B6B] bg-transparent px-8 text-sm font-medium text-[#FF6B6B] shadow-sm transition-colors hover:bg-[#FF6B6B]/10 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#FF6B6B] disabled:pointer-events-none disabled:opacity-50"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="w-full py-12 md:py-24 lg:py-32 bg-white">
+      <div class="container px-4 md:px-6 space-y-12">
+        <div class="flex flex-col items-center justify-center space-y-4 text-center">
+          <div class="space-y-2">
+            <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">Elevate Your Fitness Journey</h2>
+            <p class="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              Discover the transformative power of our state-of-the-art gym, where cutting-edge equipment and expert
+              guidance come together to help you reach your fitness goals.
+            </p>
+          </div>
+        </div>
+        <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div class="grid gap-1">
+            <div class="bg-[#FF6B6B] p-6 rounded-lg text-white">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-10 w-10"
+              >
+                <path d="M14.4 14.4 9.6 9.6"></path>
+                <path d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z"></path>
+                <path d="m21.5 21.5-1.4-1.4"></path>
+                <path d="M3.9 3.9 2.5 2.5"></path>
+                <path d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold">Strength Training</h3>
+            <p class="text-gray-500">
+              Unlock your full potential with our state-of-the-art strength training equipment and personalized
+              guidance.
+            </p>
+          </div>
+          <div class="grid gap-1">
+            <div class="bg-[#FF6B6B] p-6 rounded-lg text-white">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-10 w-10"
+              >
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                <path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold">Cardio Workouts</h3>
+            <p class="text-gray-500">
+              Elevate your heart rate and burn calories with our cutting-edge cardio machines and expert-led
+              classes.
+            </p>
+          </div>
+          <div class="grid gap-1">
+            <div class="bg-[#FF6B6B] p-6 rounded-lg text-white">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-10 w-10"
+              >
+                <path d="M22 17v1c0 .5-.5 1-1 1H3c-.5 0-1-.5-1-1v-1"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold">Yoga &amp; Pilates</h3>
+            <p class="text-gray-500">
+              Restore your mind and body with our rejuvenating yoga and Pilates classes, led by experienced
+              instructors.
+            </p>
+          </div>
+          <div class="grid gap-1">
+            <div class="bg-[#FF6B6B] p-6 rounded-lg text-white">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-10 w-10"
+              >
+                <path d="M12 4V2"></path>
+                <path d="M5 10v4a7.004 7.004 0 0 0 5.277 6.787c.412.104.802.292 1.102.592L12 22l.621-.621c.3-.3.69-.488 1.102-.592A7.003 7.003 0 0 0 19 14v-4"></path>
+                <path d="M12 4C8 4 4.5 6 4 8c-.243.97-.919 1.952-2 3 1.31-.082 1.972-.29 3-1 .54.92.982 1.356 2 2 1.452-.647 1.954-1.098 2.5-2 .595.995 1.151 1.427 2.5 2 1.31-.621 1.862-1.058 2.5-2 .629.977 1.162 1.423 2.5 2 1.209-.548 1.68-.967 2-2 1.032.916 1.683 1.157 3 1-1.297-1.036-1.758-2.03-2-3-.5-2-4-4-8-4Z"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold">Nutrition Coaching</h3>
+            <p class="text-gray-500">
+              Achieve your goals with personalized nutrition guidance from our expert coaches.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="w-full py-12 md:py-24 lg:py-32 bg-[#F5F5F5]">
+      <div class="container px-4 md:px-6 space-y-12">
+        <div class="flex flex-col items-center justify-center space-y-4 text-center">
+          <div class="space-y-2">
+            <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">What Our Clients Say</h2>
+            <p class="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              Hear from our satisfied members about their transformative experiences at our gym.
+            </p>
+          </div>
+        </div>
+        <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <span class="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full">
+                <span class="flex h-full w-full items-center justify-center rounded-full bg-muted">JD</span>
+              </span>
+              <div class="ml-4">
+                <h4 class="text-lg font-bold">John Doe</h4>
+                <p class="text-gray-500 text-sm">Fitness Enthusiast</p>
+              </div>
+            </div>
+            <p class="text-gray-500">
+              "This gym has completely transformed my fitness journey. The equipment is top-notch, and the trainers
+              are incredibly knowledgeable and motivating."
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <span class="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full">
+                <span class="flex h-full w-full items-center justify-center rounded-full bg-muted">JD</span>
+              </span>
+              <div class="ml-4">
+                <h4 class="text-lg font-bold">Jane Smith</h4>
+                <p class="text-gray-500 text-sm">Yoga Enthusiast</p>
+              </div>
+            </div>
+            <p class="text-gray-500">
+              "I've been coming to this gym for years, and the yoga and Pilates classes have been a game-changer for
+              my overall well-being. The instructors are truly exceptional."
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <span class="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full">
+                <span class="flex h-full w-full items-center justify-center rounded-full bg-muted">JD</span>
+              </span>
+              <div class="ml-4">
+                <h4 class="text-lg font-bold">Michael Johnson</h4>
+                <p class="text-gray-500 text-sm">Strength Training Enthusiast</p>
+              </div>
+            </div>
+            <p class="text-gray-500">
+              "This gym has the best strength training equipment I've ever used. The trainers are always on hand to
+              provide guidance and support, helping me push my limits."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="w-full py-12 md:py-24 lg:py-32 bg-white">
+      <div class="container px-4 md:px-6 space-y-12">
+        <div class="flex flex-col items-center justify-center space-y-4 text-center">
+          <div class="space-y-2">
+            <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">Explore Our Facilities</h2>
+            <p class="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              Take a virtual tour of our state-of-the-art gym and see why we're the premier fitness destination in
+              the area.
+            </p>
+          </div>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <img
+            src="/placeholder.svg"
+            width="300"
+            height="200"
+            alt="Gym Facility"
+            class="rounded-lg object-cover"
+            style="aspect-ratio: 300 / 200; object-fit: cover;"
+          />
+          <img
+            src="/placeholder.svg"
+            width="300"
+            height="200"
+            alt="Gym Facility"
+            class="rounded-lg object-cover"
+            style="aspect-ratio: 300 / 200; object-fit: cover;"
+          />
+          <img
+            src="/placeholder.svg"
+            width="300"
+            height="200"
+            alt="Gym Facility"
+            class="rounded-lg object-cover"
+            style="aspect-ratio: 300 / 200; object-fit: cover;"
+          />
+          <img
+            src="/placeholder.svg"
+            width="300"
+            height="200"
+            alt="Gym Facility"
+            class="rounded-lg object-cover"
+            style="aspect-ratio: 300 / 200; object-fit: cover;"
+          />
+          <img
+            src="/placeholder.svg"
+            width="300"
+            height="200"
+            style="aspect-ratio: 300 / 200; object-fit: cover;"
+            alt="Gym Facility"
+            class="rounded-lg object-cover"
+          />
+          <img
+            src="/placeholder.svg"
+            width="300"
+            height="200"
+            alt="Gym Facility"
+            class="rounded-lg object-cover"
+            style="aspect-ratio: 300 / 200; object-fit: cover;"
+          />
+          <img
+            src="/placeholder.svg"
+            width="300"
+            height="200"
+            alt="Gym Facility"
+            class="rounded-lg object-cover"
+            style="aspect-ratio: 300 / 200; object-fit: cover;"
+          />
+          <img
+            src="/placeholder.svg"
+            width="300"
+            height="200"
+            alt="Gym Facility"
+            class="rounded-lg object-cover"
+            style="aspect-ratio: 300 / 200; object-fit: cover;"
+          />
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-[#0D0D0D] text-white">
+    <p class="text-xs">© 2024 Fitness Gym. All rights reserved.</p>
+    <nav class="sm:ml-auto flex gap-4 sm:gap-6">
+      <a class="text-xs hover:underline underline-offset-4" href="#">
+        Terms of Service
+      </a>
+    </nav>
+  </footer>
+</div>

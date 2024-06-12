@@ -11,3 +11,4 @@ export { default as VerticalTimeline } from './components/VerticalTimeline.svelt
 export { default as ScrollWithLight } from './components/ScrollWithLight.svelte';
 export { default as LoginForm } from './components/LoginForm.svelte';
 export { default as RegisterForm } from './components/RegisterForm.svelte';
+export { default as SimpleLogin } from './components/SimpleLogin.svelte';

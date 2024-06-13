@@ -1,6 +1,39 @@
 <script>
 	import * as Carousel from '$lib/components/ui/carousel/index.js';
-	import Autoplay from 'embla-carousel-autoplay';
+	import { Button } from '$lib/components/ui/button/index.js';
+	import { onMount } from 'svelte';
+	import Swiper from 'swiper';
+	import 'swiper/css';
+	import 'swiper/css/effect-cube';
+	import 'swiper/css/effect-creative';
+	import 'swiper/css/effect-cards';
+	import 'swiper/css/effect-flip';
+	import 'swiper/css/autoplay';
+	import { Autoplay, EffectCube, EffectCreative, EffectFlip, EffectCards } from 'swiper/modules';
+
+	let swiper_element;
+
+	onMount(() => {
+		let swiper = new Swiper(swiper_element, {
+			modules: [Autoplay, EffectCube, EffectCreative, EffectFlip, EffectCards],
+			effect: 'cube',
+			limitProgress: 1,
+			grabCursor: true,
+			loop: true,
+			speed: 1000,
+			cubeEffect: {
+				shadow: false,
+				slideShadows: true,
+				shadowOffset: 10,
+				shadowScale: 0.94
+			},
+			autoplay: {
+				delay: 2600,
+				pauseOnMouseEnter: true
+			}
+		});
+	});
+
 	export let data;
 
 	console.log(data);
@@ -39,18 +72,33 @@
 			<span class="text-primary text-md pl-2 font-semibold tracking-wide">Fitness Gym</span>
 		</a>
 		<nav class="ml-auto flex gap-4 sm:gap-6">
-			<a class="text-xs md:text-sm font-medium hover:underline underline-offset-4" href="#">
+			<a
+				class=" hidden md:block text-xs md:text-sm font-medium hover:underline underline-offset-4"
+				href="#"
+			>
 				About
 			</a>
-			<a class="text-xs md:text-sm font-medium hover:underline underline-offset-4" href="#">
+			<a
+				class=" hidden md:block text-xs md:text-sm font-medium hover:underline underline-offset-4"
+				href="#"
+			>
 				Classes
 			</a>
-			<a class="text-xs md:text-sm font-medium hover:underline underline-offset-4" href="#">
+			<a
+				class=" hidden md:block text-xs md:text-sm font-medium hover:underline underline-offset-4"
+				href="#"
+			>
 				Trainers
 			</a>
-			<a class="text-xs md:text-sm font-medium hover:underline underline-offset-4" href="#">
+			<a
+				class="hidden md:block text-xs md:text-sm font-medium hover:underline underline-offset-4"
+				href="#"
+			>
 				Contact
 			</a>
+			<Button class="border-primary text-primary hover:text-gray-900" variant="outline"
+				>Join Now</Button
+			>
 		</nav>
 	</header>
 	<main class="flex-1">
@@ -60,67 +108,50 @@
 				class="relative w-full max-h-[600px] overflow-hidden"
 				role="region"
 			>
-				<div class="overflow-hidden">
-					<div class="flex -ml-4">
-						<Carousel.Root
-                plugins={[
-    Autoplay({
-      delay: 4000,
-    }),
-  ]}
-
-            >
-							<Carousel.Content>
-								<Carousel.Item>
-									<div
-										aria-roledescription="slide"
-										class="min-w-0 shrink-0 grow-0 basis-full pl-4"
-										role="group"
-									>
-										<img
-											src="gym/ripped_blackman.png"
-											width="1920"
-											height="1080"
-											alt="Hero"
-											class="object-cover object-top w-full h-[600px]"
-											style="aspect-ratio:1920/1080;"
-										/>
-									</div>
-								</Carousel.Item>
-								<Carousel.Item>
-									<div
-										aria-roledescription="slide"
-										class="min-w-0 shrink-0 grow-0 basis-full pl-4"
-										role="group"
-									>
-										<img
-											src="gym/powerlifting_blackman.png"
-											width="1920"
-											height="1080"
-											alt="Hero"
-											class="object-cover w-full h-[600px]"
-											style="aspect-ratio:1920/1080;object-fit:cover"
-										/>
-									</div>
-								</Carousel.Item>
-								<Carousel.Item>
-									<div
-										aria-roledescription="slide"
-										class="min-w-0 shrink-0 grow-0 basis-full pl-4"
-										role="group"
-									>
-										<img
-											src="gym/ripped_blackman.png"
-											width="1920"
-											height="1080"
-											alt="Hero"
-											class="object-cover w-full h-[600px]"
-											style="aspect-ratio:1920/1080;object-fit:cover"
-										/>
-									</div>
-								</Carousel.Item>
-							</Carousel.Content>
-						</Carousel.Root>
+				<div bind:this={swiper_element} class="swiper overflow-hidden">
+					<div class="swiper-wrapper flex -ml-4">
+						<div
+							aria-roledescription="slide"
+							class="swiper-slide min-w-0 shrink-0 grow-0 basis-full pl-4"
+							role="group"
+						>
+							<img
+								src="gym/ripped_blackman.png"
+								width="1920"
+								height="1080"
+								alt="Hero"
+								class="object-cover object-top w-full h-[600px]"
+								style="aspect-ratio:1920/1080;"
+							/>
+						</div>
+						<div
+							aria-roledescription="slide"
+							class="swiper-slide min-w-0 shrink-0 grow-0 basis-full pl-4"
+							role="group"
+						>
+							<img
+								src="gym/powerlifting_blackman.png"
+								width="1920"
+								height="1080"
+								alt="Hero"
+								class="object-cover w-full h-[600px]"
+								style="aspect-ratio:1920/1080;object-fit:cover"
+							/>
+						</div>
+						<div
+							aria-roledescription="slide"
+							class="swiper-slide min-w-0 shrink-0 grow-0 basis-full pl-4"
+							role="group"
+						>
+							<img
+								src="gym/ripped_blackman.png"
+								width="1920"
+								height="1080"
+								alt="Hero"
+								class="object-cover w-full h-[600px]"
+								style="aspect-ratio:1920/1080;object-fit:cover"
+							/>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -155,7 +186,7 @@
 			</div>
 		</section>
 		<section class="w-full py-12 md:py-24 lg:py-32 bg-[#3b3b3b] text-base-100">
-			<div class="container px-4 md:px-6 space-y-12">
+			<div class="container px-4 mx-auto md:px-6 space-y-12">
 				<div class="flex flex-col items-center justify-center space-y-4 text-center">
 					<div class="space-y-2">
 						<h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">
@@ -169,7 +200,7 @@
 						</p>
 					</div>
 				</div>
-				<div class="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+				<div class=" mx-auto grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 					<div class="grid gap-1">
 						<div class="bg-primary p-6 rounded-lg text-white">
 							<svg
@@ -196,7 +227,7 @@
 							</svg>
 						</div>
 						<h3 class="text-lg font-bold">Strength Training</h3>
-						<p class="text-base-200">
+						<p class="text-gray-400">
 							Unlock your full potential with our state-of-the-art strength training equipment and
 							personalized guidance.
 						</p>
@@ -222,7 +253,7 @@
 							</svg>
 						</div>
 						<h3 class="text-lg font-bold">Cardio Workouts</h3>
-						<p class="text-gray-500">
+						<p class="text-gray-400">
 							Elevate your heart rate and burn calories with our cutting-edge cardio machines and
 							expert-led classes.
 						</p>
@@ -245,7 +276,7 @@
 							</svg>
 						</div>
 						<h3 class="text-lg font-bold">Yoga &amp; Pilates</h3>
-						<p class="text-gray-500">
+						<p class="text-gray-400">
 							Restore your mind and body with our rejuvenating yoga and Pilates classes, led by
 							experienced instructors.
 						</p>
@@ -274,7 +305,7 @@
 							</svg>
 						</div>
 						<h3 class="text-lg font-bold">Nutrition Coaching</h3>
-						<p class="text-gray-500">
+						<p class="text-gray-400">
 							Achieve your goals with personalized nutrition guidance from our expert coaches.
 						</p>
 					</div>
@@ -282,7 +313,7 @@
 			</div>
 		</section>
 		<section class="w-full py-12 md:py-24 lg:py-32 bg-[#F5F5F5]">
-			<div class="container px-4 md:px-6 space-y-12">
+			<div class="container mx-auto px-4 md:px-6 space-y-12">
 				<div class="flex flex-col items-center justify-center space-y-4 text-center">
 					<div class="space-y-2">
 						<h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">What Our Clients Say</h2>
@@ -297,7 +328,8 @@
 					<div class="bg-white p-6 rounded-lg shadow-md">
 						<div class="flex items-center mb-4">
 							<span class="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full">
-								<span class="flex h-full w-full items-center justify-center rounded-full bg-muted"
+								<span
+									class="flex h-full w-full bg-accent items-center justify-center rounded-full bg-muted"
 									>JD</span
 								>
 							</span>
@@ -314,7 +346,8 @@
 					<div class="bg-white p-6 rounded-lg shadow-md">
 						<div class="flex items-center mb-4">
 							<span class="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full">
-								<span class="flex h-full w-full items-center justify-center rounded-full bg-muted"
+								<span
+									class="flex h-full w-full bg-success items-center justify-center rounded-full bg-muted"
 									>JD</span
 								>
 							</span>
@@ -331,7 +364,8 @@
 					<div class="bg-white p-6 rounded-lg shadow-md">
 						<div class="flex items-center mb-4">
 							<span class="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full">
-								<span class="flex h-full w-full items-center justify-center rounded-full bg-muted"
+								<span
+									class="flex h-full w-full items-center bg-secondary justify-center rounded-full bg-muted"
 									>JD</span
 								>
 							</span>
@@ -349,7 +383,7 @@
 			</div>
 		</section>
 		<section class="w-full py-12 md:py-24 lg:py-32 bg-black">
-			<div class="container px-4 md:px-6 space-y-12">
+			<div class="container mx-auto px-4 md:px-6 space-y-12">
 				<div class="flex flex-col items-center justify-center space-y-4 text-center">
 					<div class="space-y-2">
 						<h2 class="text-3xl font-bold tracking-tighter sm:text-5xl text-base-100">
@@ -363,14 +397,14 @@
 						</p>
 					</div>
 				</div>
-				<div class="grid justify-center gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+				<div class="grid justify-center w-full gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 					{#each data.facilities as facility}
 						<img
 							src="gym/{facility.image_src}"
 							width="300"
 							height="200"
 							alt={facility.alt}
-							class="rounded-lg object-cover"
+							class="rounded-lg object-contain object-center"
 							style="aspect-ratio:300/200;object-fit:cover"
 						/>
 					{/each}

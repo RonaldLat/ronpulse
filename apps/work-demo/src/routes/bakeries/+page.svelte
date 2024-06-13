@@ -1,5 +1,5 @@
 <script>
-import { GradientHeading} from '@repo/ui'
+	import { GradientHeading } from '@repo/ui';
 </script>
 
 <section>
@@ -79,5 +79,5 @@ import { GradientHeading} from '@repo/ui'
 	</div>
 </section>
 
-<GradientHeading/>
-<GradientHeading> This is a gradient heading imported package</GradientHeading>
+<GradientHeading />
+<GradientHeading>This is a gradient heading imported package</GradientHeading>

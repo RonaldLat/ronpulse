@@ -1,8 +1,8 @@
 /** @type {import('./$types').PageLoad} */
-export function load({ params,data }) {
+export function load({ params, data }) {
 	return {
 		/**type {Object}*/
-    data,
+		data,
 		cakes: [
 			{
 				name: 'Chocolate Berry Cake',
@@ -36,7 +36,7 @@ export function load({ params,data }) {
 				description: 'A moist carrot cake with crunchy walnuts and a creamy cream cheese frosting.',
 				price: 2400,
 				image: 'carrrotcake3.png'
-			},
+			}
 		],
 
 		cakes_slides: [

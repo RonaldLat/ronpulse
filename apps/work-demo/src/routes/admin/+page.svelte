@@ -15,4 +15,3 @@
 <VerticalTimeline />
 <input type="range" min="0" max="100" value="49" class="range" />
 <div class="overflow-x-auto"></div>
-

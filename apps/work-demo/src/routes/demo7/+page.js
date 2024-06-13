@@ -35,7 +35,7 @@ export function load({ params }) {
 				description: 'A moist carrot cake with crunchy walnuts and a creamy cream cheese frosting.',
 				price: 2400,
 				image: 'carrrotcake3.png'
-			},
+			}
 		]
 	};
 }

@@ -4,11 +4,11 @@
 	import 'swiper/css';
 	import 'swiper/css/effect-cube';
 	import 'swiper/css/autoplay';
-	import { Autoplay, EffectCube, } from 'swiper/modules';
+	import { Autoplay, EffectCube } from 'swiper/modules';
 
-  export let data;
-  console.log(data.cakes)
-  const cakes = data.cakes
+	export let data;
+	console.log(data.cakes);
+	const cakes = data.cakes;
 
 	let swiper_element;
 
@@ -48,52 +48,54 @@
 
 		<div bind:this={swiper_element} class="swiper">
 			<div class="swiper-wrapper">
-        {#each cakes as cake (cake.name)}
-           <!-- content here -->
-				<div class="swiper-slide opacity-100 bg overflow-hidden">
-					<img
-						src="nobg/{cake.image}"
-					/>
-					<div class="cost dark-text">From Ksh.{cake.price} per Kg</div>
-					<div class="overlay">
-						<h1>{cake.name}</h1>
-						<p>{cake.description}</p>
+				{#each cakes as cake (cake.name)}
+					<!-- content here -->
+					<div class="swiper-slide opacity-100 bg overflow-hidden">
+						<img src="nobg/{cake.image}" />
+						<div class="cost dark-text">From Ksh.{cake.price} per Kg</div>
+						<div class="overlay">
+							<h1>{cake.name}</h1>
+							<p>{cake.description}</p>
+						</div>
 					</div>
-				</div>
-        {/each}
+				{/each}
 			</div>
 		</div>
 	</section>
 
+	<div class="max-w-full">
+		<section class="py-12">
+			<div class="max-w-7xl mx-auto px-4 sm:px-2 lg:px-8">
+				<h2 class="text-3xl text-gray-200 font-extrabold text-center mb-8">Our Delicious Cakes</h2>
+				<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+					{#each cakes as cake}
+						<div
+							class="max-w-md w-full flex flex-col justify-between overflow-hidden bg-blue-50 border border-gray-700 rounded-lg shadow-lg"
+						>
+							<div class="px-4 py-2">
+								<h1 class="text-xl font-bold text-gray-800 uppercase">{cake.name}</h1>
+								<p class="mt-1 text-sm text-gray-600">{cake.description}</p>
+							</div>
 
+							<img
+								class="object-contain w-full h-48 mt-2"
+								src="nobg/{cake.image}"
+								alt={cake.name}
+							/>
 
-  <div class="max-w-full">
-
-    <section class="py-12 ">
-      <div class="max-w-7xl mx-auto px-4 sm:px-2 lg:px-8">
-        <h2 class="text-3xl text-gray-200 font-extrabold  text-center mb-8">Our Delicious Cakes</h2>
-        <div class="grid  sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {#each cakes as cake}
-            <div class="max-w-md w-full flex flex-col justify-between overflow-hidden bg-blue-50 border border-gray-700 rounded-lg shadow-lg ">
-              <div class="px-4 py-2">
-                <h1 class="text-xl font-bold text-gray-800 uppercase ">{cake.name}</h1>
-                <p class="mt-1 text-sm text-gray-600 ">{cake.description}</p>
-              </div>
-
-              <img class="object-contain w-full h-48 mt-2" src="nobg/{cake.image}" alt={cake.name}>
-
-              <div class="flex items-center justify-between  px-4 py-2 bg-gray-900">
-                <h1 class="text-lg font-bold text-white">KES. {cake.price}</h1>
-                <button class="px-2 py-1 text-xs font-semibold text-gray-900 uppercase transition-colors duration-300 transform bg-gray-100 rounded hover:bg-[#ff75a0] focus:bg-gray-400 focus:outline-none">Add to cart</button>
-              </div>
-            </div>
-          {/each}
-
-        </div>
-      </div>
-    </section>
-
-</div>
+							<div class="flex items-center justify-between px-4 py-2 bg-gray-900">
+								<h1 class="text-lg font-bold text-white">KES. {cake.price}</h1>
+								<button
+									class="px-2 py-1 text-xs font-semibold text-gray-900 uppercase transition-colors duration-300 transform bg-gray-100 rounded hover:bg-[#ff75a0] focus:bg-gray-400 focus:outline-none"
+									>Add to cart</button
+								>
+							</div>
+						</div>
+					{/each}
+				</div>
+			</div>
+		</section>
+	</div>
 </body>
 
 <style>
@@ -202,7 +204,7 @@
 		position: relative;
 		background-position: center;
 		background-size: cover;
-		border: 1px solid rgba(255, 255, 255, 1.0);
+		border: 1px solid rgba(255, 255, 255, 1);
 		user-select: none;
 		border-radius: 20px;
 	}

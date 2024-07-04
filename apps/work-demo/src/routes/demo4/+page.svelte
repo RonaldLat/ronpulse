@@ -44,7 +44,7 @@
 // https://v0.dev/t/isWQ5bI0j76
 -->
 
-<div  class="flex flex-col min-h-[100dvh]">
+<div class="flex flex-col min-h-[100dvh]">
 	<header class="px-4 lg:px-6 h-14 flex items-center bg-[#0D0D0D] text-white">
 		<a class="flex items-center justify-center" href="#">
 			<svg

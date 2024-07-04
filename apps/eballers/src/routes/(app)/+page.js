@@ -1,10 +1,8 @@
 export const load = ({ data }) => {
-  // const { pathname } = url;
-  console.log(data)
+	// const { pathname } = url;
+	console.log(data);
 
-  return {
-    pb: data
-  }
-}
-
-
+	return {
+		pb: data
+	};
+};

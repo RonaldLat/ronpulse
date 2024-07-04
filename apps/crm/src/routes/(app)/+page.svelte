@@ -1,6 +1,10 @@
 <script>
 	import Home from '$lib/Home.svelte';
 	import Button from '$lib/components/ui/button/button.svelte';
+  import { createServerClient } from '@supabase/ssr'
+
+  // console.log(createServerClient)
+
 
 	export let data;
 

@@ -52,7 +52,7 @@
 					checked: allPageRowsSelected
 				});
 			},
-			accessor: 'business_id',
+			accessor: 'cid',
 			cell: ({ row }, { pluginStates }) => {
 				const { getRowState } = pluginStates.select;
 				const { isSelected } = getRowState(row);
@@ -72,13 +72,14 @@
 		}),
 		table.column({
 			header: 'Reviews',
-			accessor: 'review_count',
+			accessor: 'reviews_count',
 			plugins: { sort: { disable: true }, filter: { exclude: true } }
 		}),
 		table.column({
-			header: 'Name',
-			accessor: 'name',
-			cell: ({ value }) => value.toLowerCase(),
+			header: 'Title',
+			accessor: 'title',
+			// cell: ({ value }) => value.toLowerCase(),
+			cell: ({ value }) => value,
 			plugins: {
 				filter: {
 					getFilterValue(value) {
@@ -92,7 +93,7 @@
 		}),
 		table.column({
 			header: 'Phone',
-			accessor: 'phone_number',
+			accessor: 'phone',
 			plugins: {
 				filter: {
 					exclude: false
@@ -130,7 +131,7 @@
 		}),
 		table.column({
 			header: 'Niche',
-			accessor: 'types',
+			accessor: 'niche',
 			plugins: {
 				filter: {
 					exclude: true
@@ -138,8 +139,8 @@
 			}
 		}),
 		table.column({
-			header: 'Verified',
-			accessor: 'verified',
+			header: 'Is Lead',
+			accessor: 'is_lead',
 			plugins: {
 				filter: {
 					exclude: true
@@ -187,7 +188,7 @@
 
 	const { selectedDataIds } = pluginStates.select;
 
-	const hideableCols = ['review_count', 'name', 'website', 'city', 'verified', 'niche'];
+	const hideableCols = ['reviews_count', 'title', 'website', 'city', 'is_lead', 'niche'];
 	//$pageSize = 10;
 
 	console.log('countx', count);
@@ -197,7 +198,7 @@
 	<div class="flex items-center py-4">
 		<Input
 			class="max-w-sm"
-			placeholder="Filter name, phone, website..."
+			placeholder="Filter title, phone, website..."
 			type="text"
 			bind:value={$filterValue}
 		/>
@@ -238,7 +239,7 @@
 							{#each headerRow.cells as cell (cell.id)}
 								<Subscribe attrs={cell.attrs()} let:attrs props={cell.props()} let:props>
 									<Table.Head {...attrs} class={cn('[&:has([role=checkbox])]:pl-3 text-black')}>
-										{#if cell.id === 'data.phone_number'}
+										{#if cell.id === 'data.phone'}
 											<div class="text-right font-medium">
 												<Render of={cell.render()} />
 											</div>
@@ -252,7 +253,7 @@
 													)}
 												/>
 											</Button>
-										{:else if cell.id === 'verified'}
+										{:else if cell.id === 'is_lead'}
 											<Button variant="ghost" on:click={props.sort.toggle}>
 												<Render of={cell.render()} />
 												<ArrowUpDown
@@ -262,7 +263,7 @@
 													)}
 												/>
 											</Button>
-										{:else if cell.id === 'name'}
+										{:else if cell.id === 'title'}
 											<Button variant="ghost" on:click={props.sort.toggle}>
 												<Render of={cell.render()} />
 												{#if props.sort.order === 'asc'}
@@ -298,9 +299,13 @@
 											<div class="text-right font-medium">
 												<Render of={cell.render()} />
 											</div>
-										{:else if cell.id === 'types'}
-											<div class="capitalize">
-												<Render of={cell.render()} />
+										{:else if cell.id === 'website'}
+											<div class="lowercase text-sky-600">
+												<a href={cell.render()} target="_blank"><Render of={cell.render()} /></a>
+											</div>
+										{:else if cell.id === 'phone'}
+											<div class="lowercase text-emeral-600 truncate">
+												<a href="tel:{cell.render()} "><Render of={cell.render()} /></a>
 											</div>
 										{:else}
 											<Render of={cell.render()} />

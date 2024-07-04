@@ -15,9 +15,7 @@
         },
         "targets": {
           "nx-release-publish": {
-            "dependsOn": [
-              "^nx-release-publish"
-            ],
+            "dependsOn": ["^nx-release-publish"],
             "executor": "@nx/js:release-publish",
             "options": {},
             "configurations": {}
@@ -37,9 +35,7 @@
         "projectType": "library",
         "metadata": {
           "targetGroups": {
-            "NPM Scripts": [
-              "test"
-            ]
+            "NPM Scripts": ["test"]
           }
         },
         "targets": {
@@ -55,9 +51,7 @@
             "configurations": {}
           },
           "nx-release-publish": {
-            "dependsOn": [
-              "^nx-release-publish"
-            ],
+            "dependsOn": ["^nx-release-publish"],
             "executor": "@nx/js:release-publish",
             "options": {},
             "configurations": {}
@@ -77,15 +71,7 @@
         "projectType": "library",
         "metadata": {
           "targetGroups": {
-            "NPM Scripts": [
-              "dev",
-              "build",
-              "preview",
-              "check",
-              "check:watch",
-              "lint",
-              "format"
-            ]
+            "NPM Scripts": ["dev", "build", "preview", "check", "check:watch", "lint", "format"]
           }
         },
         "targets": {
@@ -167,9 +153,7 @@
             "configurations": {}
           },
           "nx-release-publish": {
-            "dependsOn": [
-              "^nx-release-publish"
-            ],
+            "dependsOn": ["^nx-release-publish"],
             "executor": "@nx/js:release-publish",
             "options": {},
             "configurations": {}
@@ -189,9 +173,7 @@
         "projectType": "library",
         "metadata": {
           "targetGroups": {
-            "NPM Scripts": [
-              "lint"
-            ]
+            "NPM Scripts": ["lint"]
           }
         },
         "targets": {
@@ -207,9 +189,7 @@
             "configurations": {}
           },
           "nx-release-publish": {
-            "dependsOn": [
-              "^nx-release-publish"
-            ],
+            "dependsOn": ["^nx-release-publish"],
             "executor": "@nx/js:release-publish",
             "options": {},
             "configurations": {}
@@ -229,13 +209,7 @@
         "projectType": "library",
         "metadata": {
           "targetGroups": {
-            "NPM Scripts": [
-              "dev",
-              "build",
-              "preview",
-              "check",
-              "check:watch"
-            ]
+            "NPM Scripts": ["dev", "build", "preview", "check", "check:watch"]
           }
         },
         "targets": {
@@ -437,13 +411,7 @@
         "projectType": "library",
         "metadata": {
           "targetGroups": {
-            "NPM Scripts": [
-              "dev",
-              "build",
-              "preview",
-              "check",
-              "check:watch"
-            ]
+            "NPM Scripts": ["dev", "build", "preview", "check", "check:watch"]
           }
         },
         "targets": {

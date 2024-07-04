@@ -233,9 +233,7 @@
         {
           "file": "packages/utils/package.json",
           "hash": "4623927327594311119",
-          "deps": [
-            "npm:@supabase/supabase-js"
-          ]
+          "deps": ["npm:@supabase/supabase-js"]
         },
         {
           "file": "packages/utils/supabase/hooks.server.ts",
@@ -9456,10 +9454,7 @@
         {
           "file": "packages/ui/package.json",
           "hash": "13332662741391974463",
-          "deps": [
-            "@repo/eslint-config",
-            "npm:svelte"
-          ]
+          "deps": ["@repo/eslint-config", "npm:svelte"]
         }
       ]
     }

@@ -1,4 +1,2 @@
-import {readable} from "svelte/store";
-export const categories = readable('lat')
-
-
+import { readable } from 'svelte/store';
+export const categories = readable('lat');

@@ -15,7 +15,7 @@ const config = {
 		adapter: adapter({
 			// edge: false, /*depricated**/
 			runtime: 'nodejs20.x',
-			split: true
+			split: false
 		}),
 		csrf: {
 			checkOrigin: false //remember to remove this in final production

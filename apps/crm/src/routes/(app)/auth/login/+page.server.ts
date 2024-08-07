@@ -24,7 +24,7 @@ export const actions: Actions = {
 
 		const { error } = await supabase.auth.signInWithPassword({ email, password });
 		if (error) {
-			console.error(error);
+			console.error('login error:', error);
 			return redirect(303, '/auth/error');
 		} else {
 			return redirect(303, '/private/lists');

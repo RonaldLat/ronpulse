@@ -295,7 +295,11 @@
 							{#each row.cells as cell (cell.id)}
 								<Subscribe attrs={cell.attrs()} let:attrs>
 									<Table.Cell class="[&:has([role=checkbox])]:pl-3" {...attrs}>
-										{#if cell.id === 'amount'}
+										{#if cell.id === 'title'}
+											<div class="text-left  font-semibold ">
+												<a href="/private/lists/{cell.row.original.cid}"> <Render of={cell.render()} /></a>
+											</div>
+										{:else if cell.id === 'amount'}
 											<div class="text-right font-medium">
 												<Render of={cell.render()} />
 											</div>
@@ -305,7 +309,7 @@
 											</div>
 										{:else if cell.id === 'phone'}
 											<div class="lowercase text-emeral-600 truncate">
-												<a href="tel:{cell.render()} "><Render of={cell.render()} /></a>
+												<a href="tel:{cell.render()}" class="underline"><Render of={cell.render()} /></a>
 											</div>
 										{:else}
 											<Render of={cell.render()} />
